@@ -14,7 +14,9 @@ Conexões verificadas: Supabase Auth/PostgreSQL/Storage, bucket privado e RLS; A
 
 Conta permanente de administrador criada a pedido do proprietário e validada por login HTTP e abertura do painel. O endereço `.local` é identidade de acesso, não uma caixa de correio. Credenciais ficam somente em `.production/owner-access.json` ignorado; valores não são documentados no Git.
 
-Pendências externas: instalação/licença e versão CorelDRAW/eCut; entrada de macro eCut documentada para essa versão; seleção e autorização da janela no computador; identificação e qualificação de máquina/controlador/CAM; deploy e domínio HTTPS. O perfil Vercel está preparado com envio direto assinado ao Storage, conferência de tamanho/hash, download temporário e fila PostgreSQL. A hospedagem publicada ainda precisa da conferência após o deploy do proprietário.
+Atualização local: CorelDRAW 2026 27.2.0.135 instalado em avaliação, incluindo VBA. COM, gravação e reabertura reais de CDR/PDF foram testados com conferência geométrica. Foram corrigidos identificação segura do executável, DPI, argumentos COM opcionais, biblioteca do exportador SVG, tamanho da página e desvio uniforme de origem PDF nas cópias. Os relatórios registram as correções aplicadas.
+
+Pendências externas: ativação/licença definitiva do Corel após a avaliação; instalação/licença e entrada de macro eCut documentada; autorização local da janela para transmissão; identificação e qualificação de máquina/controlador/CAM; deploy e domínio HTTPS. O perfil Vercel está preparado com envio direto assinado ao Storage, conferência de tamanho/hash, download temporário e fila PostgreSQL. A hospedagem publicada ainda precisa da conferência após o deploy do proprietário.
 
 Os relatórios reais ficam em `audit/production-up/`. Não confundir testes de geometria, transporte e estado de interface com testes Corel/eCut/captura física. A inspeção concluiu com exit 0 e informou Corel ausente; não houve erro `exit -1` reproduzido no script.
 

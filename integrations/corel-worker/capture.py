@@ -3,16 +3,50 @@
 import ctypes
 import io
 import os
+from contextlib import contextmanager
+
+
+@contextmanager
+def physical_pixels():
+    from ctypes import wintypes
+
+    user = ctypes.WinDLL("user32", use_last_error=True)
+    change = user.SetThreadDpiAwarenessContext
+    change.argtypes = [wintypes.HANDLE]
+    change.restype = wintypes.HANDLE
+    previous = change(-4)  # DPI_AWARENESS_CONTEXT_PER_MONITOR_AWARE_V2
+    if not previous:
+        raise ctypes.WinError(ctypes.get_last_error())
+    try:
+        yield
+    finally:
+        change(previous)
 
 
 def process_path(pid):
-    import win32api, win32con, win32process
+    import win32api, win32con
+    from ctypes import wintypes
 
     handle = win32api.OpenProcess(
         win32con.PROCESS_QUERY_LIMITED_INFORMATION, False, pid
     )
     try:
-        return win32process.QueryFullProcessImageName(handle, 0)
+        # pywin32 does not expose QueryFullProcessImageName in win32process.
+        # Use the documented Windows API with a limited-query process handle.
+        kernel = ctypes.WinDLL("kernel32", use_last_error=True)
+        query = kernel.QueryFullProcessImageNameW
+        query.argtypes = [
+            wintypes.HANDLE,
+            wintypes.DWORD,
+            wintypes.LPWSTR,
+            ctypes.POINTER(wintypes.DWORD),
+        ]
+        query.restype = wintypes.BOOL
+        path = ctypes.create_unicode_buffer(32768)
+        length = wintypes.DWORD(len(path))
+        if not query(int(handle), 0, path, ctypes.byref(length)):
+            raise ctypes.WinError(ctypes.get_last_error())
+        return path.value
     finally:
         handle.Close()
 
@@ -58,6 +92,10 @@ class WindowCapture:
         return cls(windows[0][0], windows[0][1])
 
     def jpeg(self):
+        with physical_pixels():
+            return self._jpeg()
+
+    def _jpeg(self):
         import win32gui, win32ui, win32process
         from PIL import Image
 

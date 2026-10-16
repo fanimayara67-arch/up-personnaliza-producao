@@ -408,21 +408,6 @@ class Worker:
                         "preview", "nesting-preview.svg", preview, "image/svg+xml"
                     )
                 )
-                artifacts.append(
-                    self.upload(
-                        "validation",
-                        "validation.json",
-                        json.dumps(
-                            {
-                                "parameters": params,
-                                "report": result["validation"],
-                                "placements": result["placements"],
-                            },
-                            ensure_ascii=False,
-                        ).encode(),
-                        "application/json",
-                    )
-                )
                 if result["validation"]["valid"]:
                     artifacts.append(
                         self.upload("result", "nesting.svg", preview, "image/svg+xml")
@@ -459,6 +444,9 @@ class Worker:
                             params["height"],
                         )
                         again = read_svg(roundtrip.read_bytes())
+                        result["validation"][
+                            "corelExport"
+                        ] = self.corel.last_export_report
                         if (
                             abs(again["width"] - params["width"]) > 0.05
                             or abs(again["height"] - params["height"]) > 0.05
@@ -476,6 +464,22 @@ class Worker:
                                 ),
                             )
                         )
+            if operation != "analyze":
+                artifacts.append(
+                    self.upload(
+                        "validation",
+                        "validation.json",
+                        json.dumps(
+                            {
+                                "parameters": params,
+                                "report": result["validation"],
+                                "placements": result["placements"],
+                            },
+                            ensure_ascii=False,
+                        ).encode(),
+                        "application/json",
+                    )
+                )
             self.update(
                 95, "Arquivos privados enviados. Registrando o resultado e o relatório."
             )

@@ -89,7 +89,11 @@ JPEGs privados são atualizados durante tarefas; somente a captura mais recente 
 
 ## Corel/eCut: requisitos externos
 
-Este Windows não apresentou ProgID CorelDRAW, processo ou instalação padrão. COM, CDR/PDF, eCut e captura de janela real não foram validados aqui.
+CorelDRAW Graphics Suite 2026, versão 27.2.0.135, foi instalado neste Windows em modo de avaliação, incluindo VBA. A primeira abertura foi concluída sem preencher perfil opcional nem enviar relatórios de falhas. COM e exportações CDR/PDF passaram em teste real, com reabertura dos arquivos e conferência de página, quantidades, posições, vazados e contornos. Repita `.venv-production/Scripts/python.exe integrations/corel-worker/check_corel.py` em uma instância vazia, sem tarefas em execução. O teste cria apenas cópias em `.production/corel-check/`.
+
+O exportador utiliza a biblioteca SVG entregue pela própria instância Corel, argumentos COM opcionais nulos e atributos de apresentação explícitos. O XML original exportado fica preservado em `.corel.svg`; a normalização remove a declaração DTD e `clip-rule`, mantendo os contornos e a rejeição de scripts, entidades e efeitos. Para PDF, um deslocamento uniforme de origem inferior a 0,25 mm pode ser compensado na cópia somente após provar que tamanhos, quantidades e formas não mudaram; o arquivo é exportado e conferido novamente com tolerância de 0,05 mm. O relatório registra `corelExport.pageOriginCorrectionMM`.
+
+A captura foi corrigida para identificar o executável pela API Windows real e usar pixels físicos, evitando recortes em monitores ampliados. A transmissão ao painel continua exigindo autorização local pelo operador com `--live`. Testes de identidade e DPI não equivalem à autorização da transmissão. eCut ainda depende de instalação/licença e de um perfil de macros documentado; o motor UP executa o nesting real sem esse plugin.
 
 O adaptador usa `OpenDocument`, inspeção de objetos, `ExportEx`/`Finish`, `SaveAs`, `PublishToPDF` e `GMSManager.RunMacro` documentados pela Corel. Constantes são lidas da biblioteca de tipos instalada, incluindo unidade SVG em mm; não há valores numéricos presumidos. Trabalha em cópias. Documentos pessoais já abertos impedem o uso da instância. Textos/fontes precisam de conferência e conversão explícita em curvas no Corel. Teste exportação e escala na versão instalada antes de produção.
 

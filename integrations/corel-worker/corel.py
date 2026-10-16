@@ -3,7 +3,42 @@
 import json
 import os
 import shutil
+from xml.etree import ElementTree
+from defusedxml.ElementTree import fromstring
 from pathlib import Path
+
+
+def normalize_corel_svg(data):
+    """Normalize only non-geometric metadata from the trusted Corel exporter."""
+    root = fromstring(data)
+    for element in root.iter():
+        # Corel emits this presentation attribute without a clipping path.
+        # Actual clip-path, masks, effects and all geometry remain untouched;
+        # the strict production parser still rejects unsupported constructs.
+        if element.get("clip-rule") in ("evenodd", "nonzero"):
+            del element.attrib["clip-rule"]
+    return ElementTree.tostring(root, encoding="utf-8", xml_declaration=True)
+
+
+def verify_corel_roundtrip(expected, actual, tolerance=0.05):
+    if any(abs(expected[key] - actual[key]) > tolerance for key in ("width", "height")):
+        raise ValueError("Escala divergente após reabrir o arquivo Corel.")
+    remaining = [piece["geometry"] for piece in actual["pieces"]]
+    if len(remaining) != len(expected["pieces"]):
+        raise ValueError("Quantidade de contornos mudou após exportação Corel.")
+    for piece in expected["pieces"]:
+        geometry = piece["geometry"]
+        best = min(
+            range(len(remaining)),
+            key=lambda index: geometry.hausdorff_distance(remaining[index]),
+        )
+        candidate = remaining.pop(best)
+        if geometry.hausdorff_distance(
+            candidate
+        ) > tolerance or geometry.symmetric_difference(candidate).area > tolerance * (
+            geometry.length + candidate.length
+        ):
+            raise ValueError("Contorno, posição ou vazado mudou após exportação Corel.")
 
 
 def registered_corel():
@@ -104,9 +139,21 @@ class CorelAdapter:
         }
 
     def svg(self, doc, path):
+        import win32com.client
+
         export = doc.ExportEx(
-            str(path), self.constant("cdrSVG"), self.constant("cdrCurrentPage")
+            str(path),
+            self.constant("cdrSVG"),
+            self.constant("cdrCurrentPage"),
+            None,
+            None,
         )
+        # Export filters provide an embedded, unregistered type library.
+        library = export._oleobj_.GetTypeInfo().GetContainingTypeLib()[0]
+        win32com.client.gencache.EnsureModuleForTypelibInterface(
+            library, bForDemand=False
+        )
+        export = win32com.client.Dispatch(export._oleobj_)
         candidates = {
             key: value
             for group in self.constants.__dict__.get("__dicts__", [])
@@ -118,15 +165,21 @@ class CorelAdapter:
                 "A biblioteca de tipos instalada não informou uma unidade SVG milimétrica inequívoca. Valide o perfil desta versão."
             )
         export.Units = next(iter(candidates.values()))
+        export.Styling = self.constant("svgPresentationAttributes")
+        export.Encoding = self.constant("svgUTF8")
         export.Finish()
         from svg_io import read_svg
 
-        source = read_svg(Path(path).read_bytes())
+        raw = Path(path).read_bytes()
+        Path(path).with_suffix(".corel.svg").write_bytes(raw)
+        normalized = normalize_corel_svg(raw)
+        source = read_svg(normalized)
         if (
             abs(source["width"] - doc.ActivePage.SizeWidth) > 0.05
             or abs(source["height"] - doc.ActivePage.SizeHeight) > 0.05
         ):
             raise ValueError("Escala divergente no SVG exportado pelo Corel.")
+        Path(path).write_bytes(normalized)
 
     def prepare(self, original, directory):
         working = Path(directory) / ("working" + Path(original).suffix)
@@ -138,23 +191,91 @@ class CorelAdapter:
         self.svg(doc, target)
         return target, inspection
 
-    def export(self, svg_path, destination, format, width, height):
+    def _write_export(
+        self, svg_path, destination, format, width, height, offset=(0, 0)
+    ):
         doc = self.app.OpenDocument(str(Path(svg_path).resolve()))
         self.documents.append(doc)
         doc.Unit = self.constant("cdrMillimeter")
+        # SVG is opened centered on the default Corel page. SetSize preserves
+        # that center and restores the known physical SVG viewport, not scale.
+        doc.ActivePage.SetSize(width, height)
+        if offset != (0, 0):
+            # Corel uses Y up; the checked SVG/PDF viewport uses Y down.
+            doc.ActivePage.Shapes.All().Move(-offset[0], offset[1])
         if (
             abs(doc.ActivePage.SizeWidth - width) > 0.05
             or abs(doc.ActivePage.SizeHeight - height) > 0.05
         ):
             raise ValueError("Escala de página divergente ao abrir no Corel.")
         if format == "cdr":
-            doc.SaveAs(str(Path(destination).resolve()))
+            doc.SaveAs(str(Path(destination).resolve()), None)
         elif format == "pdf":
             doc.PublishToPDF(str(Path(destination).resolve()))
         else:
             raise ValueError("Exportação Corel não suportada pelo perfil.")
+        # Validate the file actually saved, rather than exporting the in-memory
+        # source document a second time.
+        doc.Dirty = False
+        doc.Close()
+        self.documents.remove(doc)
+
+    def _read_export(self, destination):
+        from svg_io import read_svg
+
+        doc = self.app.OpenDocument(str(Path(destination).resolve()))
+        self.documents.append(doc)
+        doc.Unit = self.constant("cdrMillimeter")
         roundtrip = Path(destination).with_suffix(".roundtrip.svg")
         self.svg(doc, roundtrip)
+        return roundtrip, read_svg(roundtrip.read_bytes())
+
+    def export(self, svg_path, destination, format, width, height):
+        from svg_io import read_svg
+        from shapely.affinity import translate
+
+        expected = read_svg(Path(svg_path).read_bytes())
+        self._write_export(svg_path, destination, format, width, height)
+        roundtrip, actual = self._read_export(destination)
+        self.last_export_report = {
+            "format": format,
+            "reopened": True,
+            "pageOriginCorrectionMM": [0, 0],
+        }
+        try:
+            verify_corel_roundtrip(expected, actual)
+        except ValueError:
+            # This installed Corel PDF filter can introduce a uniform page-origin
+            # offset. Correct only a small, proven rigid translation on the copy;
+            # changed contours, holes, dimensions or quantities remain failures.
+            if format != "pdf" or len(expected["pieces"]) != len(actual["pieces"]):
+                raise
+            dx = min(p["geometry"].bounds[0] for p in actual["pieces"]) - min(
+                p["geometry"].bounds[0] for p in expected["pieces"]
+            )
+            dy = min(p["geometry"].bounds[1] for p in actual["pieces"]) - min(
+                p["geometry"].bounds[1] for p in expected["pieces"]
+            )
+            if max(abs(dx), abs(dy)) > 0.25:
+                raise ValueError(
+                    "Origem PDF fora do limite de qualificação. Use CDR/SVG."
+                )
+            shifted = {
+                **expected,
+                "pieces": [
+                    {**p, "geometry": translate(p["geometry"], dx, dy)}
+                    for p in expected["pieces"]
+                ],
+            }
+            verify_corel_roundtrip(shifted, actual)
+            previous = self.documents.pop()
+            previous.Dirty = False
+            previous.Close()
+            self._write_export(svg_path, destination, format, width, height, (dx, dy))
+            roundtrip, actual = self._read_export(destination)
+            verify_corel_roundtrip(expected, actual)
+            self.last_export_report["pageOriginCorrectionMM"] = [dx, dy]
+        self.last_export_report["scaleAndContoursChecked"] = True
         return roundtrip
 
     def ecut(self, request_path):

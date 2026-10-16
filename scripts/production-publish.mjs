@@ -116,9 +116,15 @@ try {
       "Credencial detectada em: " + [...new Set(leaks)].join(", "),
     );
   const tree = git(["write-tree"]).trim();
+  const previous = git([
+    "for-each-ref",
+    "--format=%(objectname)",
+    "refs/heads/publicacao-producao",
+  ]).trim();
   const commit = git([
     "commit-tree",
     tree,
+    ...(previous ? ["-p", previous] : []),
     "-m",
     "Produção UP: painel privado, assistente, fila, nesting e conector Windows; pronto para Vercel",
   ]).trim();
