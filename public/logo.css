@@ -1,0 +1,18 @@
+.brand-symbol { display:flex; align-items:center; width:clamp(24px,8vw,44px); flex:0 0 clamp(24px,8vw,44px); }
+.brand-name { display:flex; align-items:center; width:clamp(72px,calc(100vw - 225px),130px); flex:0 0 clamp(72px,calc(100vw - 225px),130px); }
+.brand-symbol img, .brand-name img { display:block; width:100%; height:auto; object-fit:contain; }
+.footer-brand { gap:8px; }
+.footer-brand .brand-symbol { width:46px; flex-basis:46px; }
+.footer-brand .brand-name { width:150px; flex-basis:150px; }
+.footer-brand .brand-name img { filter:brightness(0) invert(1); }
+.checkout-header-inner .brand-name { width:130px; flex-basis:130px; }
+@media(min-width:700px) {
+  .checkout-header-inner .brand-name { width:180px; flex-basis:180px; }
+  .footer-brand .brand-symbol { width:54px; flex-basis:54px; }
+  .footer-brand .brand-name { width:170px; flex-basis:170px; }
+}
+@media(min-width:960px) {
+  .brand { gap:10px; }
+  .brand-symbol { width:64px; flex-basis:64px; }
+  .brand-name { width:180px; flex-basis:180px; }
+}

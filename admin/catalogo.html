@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Administrar catálogo | UP Personaliza</title>
+  <link rel="stylesheet" href="/theme.css">
+  <link rel="stylesheet" href="/admin/assets/catalogo.css">
+  <script src="/admin/assets/catalogo.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#editor">Ir para o cadastro</a>
+  <header class="topbar">
+    <a class="wordmark" href="/admin/catalogo">UP Personaliza <span>Administração local</span></a>
+    <nav aria-label="Atalhos"><a href="/admin/solicitacoes">Solicitações</a><a href="/admin/configuracoes">Dados da empresa</a><a href="/personalizados.html" target="_blank" rel="noopener">Ver coleção</a><a href="/api/admin/catalog/export.csv" download>Exportar CSV</a></nav>
+  </header>
+  <main>
+    <div class="intro"><div><p class="eyebrow">Estoque e preços</p><h1>Catálogo</h1></div><p id="overview">Carregando os produtos…</p></div>
+    <p id="message" role="status" aria-live="polite">Buscando o cadastro local.</p>
+    <p id="error" role="alert" hidden></p>
+    <div id="workspace" class="workspace" hidden>
+      <aside aria-label="Escolher produto">
+        <label class="field" for="search">Buscar por nome ou SKU<input id="search" type="search" placeholder="Ex.: chaveiro, UP-PERS-01" autocomplete="off"></label>
+        <p id="searchCount" class="hint" aria-live="polite"></p>
+        <div id="products" class="products"></div>
+      </aside>
+      <form id="editor" tabindex="-1">
+        <div class="product-heading"><img id="productImage" width="96" height="96" alt=""><div><p id="sku" class="eyebrow"></p><h2 id="productName"></h2><p class="hint">Imagem de conceito gerada por IA. Validar com a produção.</p></div></div>
+        <div class="readiness"><strong>Para completar este cadastro</strong><ul id="pending"></ul><p class="hint">Os produtos continuam sob consulta. Salvar o cadastro não libera vendas ou cobranças.</p></div>
+        <fieldset class="section"><legend>Nome e descrição</legend>
+          <label class="field">Nome do produto<input name="title" required maxlength="160"></label>
+          <label class="field">Descrição<textarea name="description" required maxlength="2000" rows="3"></textarea></label>
+        </fieldset>
+        <fieldset class="section"><legend>Produção e estoque</legend>
+          <div class="radios" role="group" aria-label="Situação de produção">
+            <label><input name="productionStatus" type="radio" value="prototype_to_validate" required> A validar</label>
+            <label><input name="productionStatus" type="radio" value="made_to_order"> Sob encomenda</label>
+            <label><input name="productionStatus" type="radio" value="stocked"> Pronta entrega</label>
+            <label><input name="productionStatus" type="radio" value="unavailable"> Indisponível</label>
+          </div>
+          <label class="field">Registro da validação<textarea name="productionNote" maxlength="1000" rows="2" placeholder="Como e com quem a produção foi confirmada"></textarea><span class="hint">Obrigatório ao escolher uma situação já confirmada.</span></label>
+          <div class="fields">
+            <label class="field">Quantidade em estoque<input name="stockQuantity" type="number" min="0" max="10000000" step="1" placeholder="Não informado"><span class="hint">Deixe vazio se não houve contagem. Zero significa nenhuma unidade.</span></label>
+            <label class="field">Origem da contagem<input name="stockSource" maxlength="500" placeholder="Ex.: contagem física, responsável e data"><span id="stockDate" class="hint"></span></label>
+          </div>
+        </fieldset>
+        <fieldset class="section"><legend>Características confirmadas</legend>
+          <div class="fields">
+            <label class="field">Material<input name="material" maxlength="200" placeholder="Informar após validar"></label>
+            <label class="field">Medidas em milímetros<input name="dimensionsMm" maxlength="200" placeholder="Ex.: largura × altura × espessura"></label>
+            <label class="field">Prazo de produção em dias úteis<input name="productionDays" type="number" min="1" max="365" step="1" placeholder="Não informado"></label>
+            <label class="field">Composição do kit<input name="piecesPerKit" maxlength="500" placeholder="Ex.: quantidades e itens incluídos"><span class="hint">Preencha quando o produto for um kit.</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="section"><legend>Custos e margem</legend>
+          <p id="reportedCost" class="hint" hidden></p>
+          <p class="hint">Use valores reais, sem separador de milhar. Inclua material, mão de obra, perdas, embalagem, frete de entrada e outros custos variáveis no custo unitário. Frete ao cliente e instalação precisam de orçamento separado.</p>
+          <div class="fields">
+            <label class="field">Custo completo por unidade (R$)<input name="unitCents" inputmode="decimal" placeholder="Não informado" data-decimal></label>
+            <label class="field">Preparo por lote (R$)<input name="setupCents" inputmode="decimal" placeholder="Não informado" data-decimal></label>
+            <label class="field">Taxa fixa por pedido (R$)<input name="fixedFeeCents" inputmode="decimal" placeholder="Não informado" data-decimal></label>
+            <label class="field">Taxa de pagamento (%)<input name="paymentFeeBps" inputmode="decimal" placeholder="Não informado" data-decimal></label>
+            <label class="field">Impostos sobre a venda (%)<input name="taxBps" inputmode="decimal" placeholder="Não informado" data-decimal></label>
+            <label class="field">Meta de contribuição (%)<input name="targetContributionBps" inputmode="decimal" placeholder="Não informado" data-decimal></label>
+          </div>
+          <p class="hint">Use zero apenas quando o custo ou taxa não se aplicar. A contribuição calculada considera os custos cadastrados; despesas fixas não alocadas ainda precisam ser cobertas.</p>
+        </fieldset>
+        <section class="section" aria-labelledby="researchTitle">
+          <div class="section-heading"><h3 id="researchTitle">Referência da pesquisa</h3><button id="copyResearch" type="button">Usar como rascunho</button></div>
+          <p id="researchInfo" class="hint"></p>
+          <div class="table-wrap"><table><caption class="sr-only">Sugestões de preços da pesquisa de mercado</caption><thead><tr><th>Quantidade</th><th>Preço por unidade</th></tr></thead><tbody id="researchRows"></tbody></table></div>
+          <p class="hint">São hipóteses de preço. Compare materiais, medidas e custos antes de decidir.</p>
+        </section>
+        <fieldset class="section"><legend>Rascunho de preços</legend>
+          <label class="field retail">Varejo por unidade (R$)<input name="retailCents" inputmode="decimal" placeholder="Não definido" data-decimal></label>
+          <p class="hint">Faixas de volume com o mesmo modelo e personalização. Os valores permanecem privados.</p>
+          <div id="tiers" class="tiers"></div>
+          <button id="addTier" type="button">Adicionar faixa de quantidade</button>
+        </fieldset>
+        <section class="calculator" aria-labelledby="calculatorTitle">
+          <h3 id="calculatorTitle">Conferir o lote</h3>
+          <label class="field">Quantidade para simulação<input id="simulationQuantity" type="number" min="1" max="10000" step="1" value="50"></label>
+          <div id="calculation" aria-live="polite"></div>
+          <p class="hint">Simulação de produtos, sem frete ao cliente. O preço mínimo distribui o preparo e as taxas fixas pelo lote e considera a meta de contribuição.</p>
+        </section>
+        <div class="savebar"><p id="saveState">Cadastro carregado.</p><div><button id="reload" type="button">Recarregar</button><button id="save" type="submit" class="primary">Salvar cadastro</button></div></div>
+      </form>
+    </div>
+  </main>
+  <template id="tierTemplate"><div class="tier"><label class="field">A partir de<input type="number" min="2" max="1000000" step="1" required data-tier-quantity></label><label class="field">Preço unitário (R$)<input inputmode="decimal" required data-tier-price data-decimal></label><button type="button" data-remove-tier>Remover faixa</button></div></template>
+</body>
+</html>

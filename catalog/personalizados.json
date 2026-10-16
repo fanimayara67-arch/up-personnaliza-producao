@@ -1,0 +1,2931 @@
+{
+  "version": 1,
+  "brand": "UP Personaliza",
+  "updatedAt": "2026-10-16T06:15:00.669Z",
+  "collection": "Presentes, lembranças e decoração personalizados",
+  "groups": [
+    {
+      "id": "up-chaveiros-acrilicos",
+      "name": "Chaveiros personalizados",
+      "intent": "Lembranças e presentes",
+      "modelIds": [
+        "chaveiro-casamento",
+        "chaveiro-mensagem"
+      ],
+      "cover": "/assets/catalogo-personalizados/01-chaveiro-casamento-1200.webp",
+      "unit": "unit"
+    },
+    {
+      "id": "up-mexedores",
+      "name": "Mexedores personalizados",
+      "intent": "Festas e eventos",
+      "modelIds": [
+        "mexedor-frutas",
+        "mexedor-coracao",
+        "mexedor-casamento",
+        "mexedor-drink-com-nome"
+      ],
+      "cover": "/assets/catalogo-personalizados/06-mexedor-frutas-1200.webp",
+      "unit": "unit"
+    },
+    {
+      "id": "up-bandejas",
+      "name": "Bandejas personalizadas",
+      "intent": "Casa e decoração",
+      "modelIds": [
+        "bandeja-espelhada",
+        "bandeja-renda",
+        "bandeja-personalizada",
+        "bandeja-cafe"
+      ],
+      "cover": "/assets/catalogo-personalizados/05-bandeja-espelhada-1200.webp",
+      "unit": "unit"
+    },
+    {
+      "id": "up-kits-eventos",
+      "name": "Kits para eventos",
+      "intent": "Festas e eventos",
+      "modelIds": [
+        "kit-mexedores-marcadores"
+      ],
+      "cover": "/assets/catalogo-personalizados/12-kit-mexedores-marcadores-1200.webp",
+      "unit": "kit"
+    },
+    {
+      "id": "up-jogo-da-velha",
+      "name": "Jogo da velha em acrílico",
+      "intent": "Casa e decoração",
+      "modelIds": [
+        "jogo-da-velha-acrilico"
+      ],
+      "cover": "/assets/catalogo-personalizados/04-jogo-da-velha-acrilico-1200.webp",
+      "unit": "unit"
+    },
+    {
+      "id": "up-chaveiro-fe",
+      "name": "Chaveiro Fé",
+      "intent": "Lembranças e presentes",
+      "modelIds": [
+        "chaveiro-fe"
+      ],
+      "cover": "/assets/catalogo-personalizados/13-chaveiro-fe-1200.webp",
+      "unit": "unit"
+    },
+    {
+      "id": "up-marcadores-pagina",
+      "name": "Marcadores de página",
+      "intent": "Lembranças e presentes",
+      "modelIds": [
+        "marcador-pagina-personalizado"
+      ],
+      "cover": "/assets/catalogo-personalizados/marcador-pagina-personalizado-1200.webp",
+      "unit": "unit"
+    },
+    {
+      "id": "up-marcadores-taca",
+      "name": "Marcadores de taça",
+      "intent": "Festas e eventos",
+      "modelIds": [
+        "marcador-taca-formato-taca"
+      ],
+      "cover": "/assets/catalogo-personalizados/marcador-taca-formato-taca-1200.webp",
+      "unit": "unit"
+    },
+    {
+      "id": "up-identificacao-personalizada",
+      "name": "Identificação personalizada",
+      "intent": "Empresas e identificação",
+      "storeCategoryId": "sinalizacao",
+      "modelIds": [
+        "up-r2-cracha-dourado",
+        "up-r2-chaveiro-quarto-hotel",
+        "up-r2-placa-reservado-cutelo"
+      ],
+      "cover": "/assets/catalogo-personalizados/r2-cracha-dourado-1254.webp",
+      "unit": "unit"
+    },
+    {
+      "id": "up-natal",
+      "name": "Natal personalizado",
+      "intent": "Natal",
+      "slug": "natal",
+      "modelIds": [
+        "up-r2-ponteira-natal-estrela",
+        "up-r2-arvore-natal-familia",
+        "up-r2-enfeite-porta-natalino",
+        "up-r2-enfeite-natal-pet",
+        "up-r2-mini-enfeites-natalinos",
+        "up-r2-enfeite-natal-transparente-nome"
+      ],
+      "cover": "/assets/catalogo-personalizados/r2-ponteira-natal-estrela-1254.webp",
+      "unit": "unit"
+    },
+    {
+      "id": "up-utilidades",
+      "name": "Utilidades personalizadas",
+      "intent": "Casa e decoração",
+      "slug": "utilidades",
+      "modelIds": [
+        "up-r2-porta-copo-monograma",
+        "up-r2-kit-porta-copos-colmeia"
+      ],
+      "cover": "/assets/catalogo-personalizados/r2-porta-copo-monograma-1254.webp",
+      "unit": "unit"
+    },
+    {
+      "id": "up-decoracao",
+      "name": "Decoração personalizada",
+      "intent": "Casa e decoração",
+      "slug": "decoracao",
+      "modelIds": [
+        "up-r2-display-medicina",
+        "up-r2-cruz-mesa-jesus",
+        "up-r2-display-futebol-personalizado",
+        "up-r2-painel-navio-veleiro-iluminado"
+      ],
+      "cover": "/assets/catalogo-personalizados/r2-display-medicina-1254.webp",
+      "unit": "unit"
+    }
+  ],
+  "models": [
+    {
+      "id": "chaveiro-casamento",
+      "familyId": "up-chaveiros-acrilicos",
+      "sku": "UP-PERS-01",
+      "label": "Casamento",
+      "title": "Chaveiro de acrílico personalizado para casamento",
+      "description": "Uma lembrança com as iniciais ou a mensagem do casal. Conte sua ideia para avaliarmos o modelo, o acabamento e a quantidade para o evento.",
+      "alt": "Conceito de chaveiro transparente com iniciais, detalhe de coração e argola dourada.",
+      "images": [
+        {
+          "src": "/assets/catalogo-personalizados/01-chaveiro-casamento-400.webp",
+          "width": 400,
+          "height": 400
+        },
+        {
+          "src": "/assets/catalogo-personalizados/01-chaveiro-casamento-800.webp",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "/assets/catalogo-personalizados/01-chaveiro-casamento-1200.webp",
+          "width": 1200,
+          "height": 1200
+        }
+      ],
+      "imageKind": "ai_generated_product_concept",
+      "productionStatus": "prototype_to_validate",
+      "stock": {
+        "quantity": null,
+        "verifiedAt": null,
+        "source": null
+      },
+      "specifications": {
+        "material": null,
+        "dimensionsMm": null,
+        "productionDays": null,
+        "piecesPerKit": null
+      },
+      "cost": {
+        "unitCents": null,
+        "setupCents": null,
+        "fixedFeeCents": null,
+        "paymentFeeBps": null,
+        "taxBps": null,
+        "targetContributionBps": null
+      },
+      "pricingResearch": {
+        "asOf": "2026-10-15",
+        "confidence": "medium",
+        "retailTargetCents": 1490,
+        "bulkTargets": [
+          {
+            "minimumQuantity": 10,
+            "unitTargetCents": 690
+          },
+          {
+            "minimumQuantity": 50,
+            "unitTargetCents": 490
+          },
+          {
+            "minimumQuantity": 100,
+            "unitTargetCents": 420
+          }
+        ],
+        "status": "proposal_not_approved",
+        "basis": "Modelo equivalente a validar; sem frete; não é oferta comercial"
+      },
+      "approvedOffers": []
+    },
+    {
+      "id": "chaveiro-mensagem",
+      "familyId": "up-chaveiros-acrilicos",
+      "sku": "UP-PERS-03",
+      "label": "Mensagem",
+      "title": "Chaveiro personalizado com mensagem",
+      "description": "Uma palavra, um agradecimento ou uma pequena mensagem para acompanhar o dia a dia. Envie o texto desejado e a quantidade para consultar o formato e a personalização.",
+      "alt": "Conceito de chaveiro retangular dourado com a palavra Gratidão e recorte de coração.",
+      "images": [
+        {
+          "src": "/assets/catalogo-personalizados/03-chaveiro-mensagem-400.webp",
+          "width": 400,
+          "height": 400
+        },
+        {
+          "src": "/assets/catalogo-personalizados/03-chaveiro-mensagem-800.webp",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "/assets/catalogo-personalizados/03-chaveiro-mensagem-1200.webp",
+          "width": 1200,
+          "height": 1200
+        }
+      ],
+      "imageKind": "ai_generated_product_concept",
+      "productionStatus": "prototype_to_validate",
+      "stock": {
+        "quantity": null,
+        "verifiedAt": null,
+        "source": null
+      },
+      "specifications": {
+        "material": null,
+        "dimensionsMm": null,
+        "productionDays": null,
+        "piecesPerKit": null
+      },
+      "cost": {
+        "unitCents": null,
+        "setupCents": null,
+        "fixedFeeCents": null,
+        "paymentFeeBps": null,
+        "taxBps": null,
+        "targetContributionBps": null
+      },
+      "pricingResearch": {
+        "asOf": "2026-10-15",
+        "confidence": "medium",
+        "retailTargetCents": 1290,
+        "bulkTargets": [
+          {
+            "minimumQuantity": 10,
+            "unitTargetCents": 590
+          },
+          {
+            "minimumQuantity": 50,
+            "unitTargetCents": 430
+          },
+          {
+            "minimumQuantity": 100,
+            "unitTargetCents": 370
+          }
+        ],
+        "status": "proposal_not_approved",
+        "basis": "Modelo equivalente a validar; sem frete; não é oferta comercial"
+      },
+      "approvedOffers": []
+    },
+    {
+      "id": "jogo-da-velha-acrilico",
+      "familyId": "up-jogo-da-velha",
+      "sku": "UP-PERS-04",
+      "label": "Cristal",
+      "title": "Jogo da velha decorativo em acrílico",
+      "description": "Um projeto que aproxima jogo e decoração de mesa. Consulte as dimensões, as peças e a possibilidade de personalização antes de definir o seu conjunto.",
+      "alt": "Conceito de tabuleiro transparente com peças de jogo da velha e compartimentos laterais.",
+      "images": [
+        {
+          "src": "/assets/catalogo-personalizados/04-jogo-da-velha-acrilico-400.webp",
+          "width": 400,
+          "height": 400
+        },
+        {
+          "src": "/assets/catalogo-personalizados/04-jogo-da-velha-acrilico-800.webp",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "/assets/catalogo-personalizados/04-jogo-da-velha-acrilico-1200.webp",
+          "width": 1200,
+          "height": 1200
+        }
+      ],
+      "imageKind": "ai_generated_product_concept",
+      "productionStatus": "prototype_to_validate",
+      "stock": {
+        "quantity": null,
+        "verifiedAt": null,
+        "source": null
+      },
+      "specifications": {
+        "material": null,
+        "dimensionsMm": null,
+        "productionDays": null,
+        "piecesPerKit": null
+      },
+      "cost": {
+        "unitCents": null,
+        "setupCents": null,
+        "fixedFeeCents": null,
+        "paymentFeeBps": null,
+        "taxBps": null,
+        "targetContributionBps": null
+      },
+      "pricingResearch": {
+        "asOf": "2026-10-15",
+        "confidence": "medium",
+        "retailTargetCents": 16990,
+        "bulkTargets": [
+          {
+            "minimumQuantity": 5,
+            "unitTargetCents": 14990
+          },
+          {
+            "minimumQuantity": 10,
+            "unitTargetCents": 13990
+          },
+          {
+            "minimumQuantity": 25,
+            "unitTargetCents": 12990
+          }
+        ],
+        "status": "proposal_not_approved",
+        "basis": "Modelo equivalente a validar; sem frete; não é oferta comercial"
+      },
+      "approvedOffers": []
+    },
+    {
+      "id": "bandeja-espelhada",
+      "familyId": "up-bandejas",
+      "sku": "UP-PERS-05",
+      "label": "Geometria dourada",
+      "title": "Bandeja decorativa com detalhes dourados",
+      "description": "Uma proposta de bandeja para destacar pequenos objetos e compor a decoração. Informe as medidas e o acabamento desejados para avaliarmos a produção do modelo.",
+      "alt": "Conceito de bandeja transparente com estrutura geométrica dourada.",
+      "images": [
+        {
+          "src": "/assets/catalogo-personalizados/05-bandeja-espelhada-400.webp",
+          "width": 400,
+          "height": 400
+        },
+        {
+          "src": "/assets/catalogo-personalizados/05-bandeja-espelhada-800.webp",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "/assets/catalogo-personalizados/05-bandeja-espelhada-1200.webp",
+          "width": 1200,
+          "height": 1200
+        }
+      ],
+      "imageKind": "ai_generated_product_concept",
+      "productionStatus": "prototype_to_validate",
+      "stock": {
+        "quantity": null,
+        "verifiedAt": null,
+        "source": null
+      },
+      "specifications": {
+        "material": null,
+        "dimensionsMm": null,
+        "productionDays": null,
+        "piecesPerKit": null
+      },
+      "cost": {
+        "unitCents": null,
+        "setupCents": null,
+        "fixedFeeCents": null,
+        "paymentFeeBps": null,
+        "taxBps": null,
+        "targetContributionBps": null
+      },
+      "pricingResearch": {
+        "asOf": "2026-10-15",
+        "confidence": "low",
+        "retailTargetCents": 24990,
+        "bulkTargets": [
+          {
+            "minimumQuantity": 5,
+            "unitTargetCents": 21990
+          },
+          {
+            "minimumQuantity": 10,
+            "unitTargetCents": 19990
+          },
+          {
+            "minimumQuantity": 25,
+            "unitTargetCents": 18990
+          }
+        ],
+        "status": "proposal_not_approved",
+        "basis": "Modelo equivalente a validar; sem frete; não é oferta comercial"
+      },
+      "approvedOffers": []
+    },
+    {
+      "id": "mexedor-frutas",
+      "familyId": "up-mexedores",
+      "sku": "UP-PERS-06",
+      "label": "Frutas",
+      "title": "Mexedor de drink com tema de frutas",
+      "description": "Modelos de frutas para combinar com a identidade da festa. Consulte a quantidade, o comprimento e as possibilidades de cor; material e uso com bebidas dependem da validação de produção.",
+      "alt": "Conceito de quatro mexedores coloridos em formatos de frutas.",
+      "images": [
+        {
+          "src": "/assets/catalogo-personalizados/06-mexedor-frutas-400.webp",
+          "width": 400,
+          "height": 400
+        },
+        {
+          "src": "/assets/catalogo-personalizados/06-mexedor-frutas-800.webp",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "/assets/catalogo-personalizados/06-mexedor-frutas-1200.webp",
+          "width": 1200,
+          "height": 1200
+        }
+      ],
+      "imageKind": "ai_generated_product_concept",
+      "productionStatus": "prototype_to_validate",
+      "stock": {
+        "quantity": null,
+        "verifiedAt": null,
+        "source": null
+      },
+      "specifications": {
+        "material": null,
+        "dimensionsMm": null,
+        "productionDays": null,
+        "piecesPerKit": null
+      },
+      "cost": {
+        "unitCents": null,
+        "setupCents": null,
+        "fixedFeeCents": null,
+        "paymentFeeBps": null,
+        "taxBps": null,
+        "targetContributionBps": null
+      },
+      "pricingResearch": {
+        "asOf": "2026-10-15",
+        "confidence": "medium",
+        "retailTargetCents": 890,
+        "bulkTargets": [
+          {
+            "minimumQuantity": 10,
+            "unitTargetCents": 590
+          },
+          {
+            "minimumQuantity": 50,
+            "unitTargetCents": 390
+          },
+          {
+            "minimumQuantity": 100,
+            "unitTargetCents": 349
+          }
+        ],
+        "status": "proposal_not_approved",
+        "basis": "Modelo equivalente a validar; sem frete; não é oferta comercial"
+      },
+      "approvedOffers": []
+    },
+    {
+      "id": "bandeja-renda",
+      "familyId": "up-bandejas",
+      "sku": "UP-PERS-07",
+      "label": "Renda branca",
+      "title": "Bandeja decorativa com desenho de renda",
+      "description": "Um desenho delicado para organizar objetos e compor presentes. Conte como pretende usar a peça e indique as medidas desejadas para consultarmos o modelo e o acabamento.",
+      "alt": "Conceito de bandeja transparente com desenho branco semelhante a renda.",
+      "images": [
+        {
+          "src": "/assets/catalogo-personalizados/07-bandeja-renda-400.webp",
+          "width": 400,
+          "height": 400
+        },
+        {
+          "src": "/assets/catalogo-personalizados/07-bandeja-renda-800.webp",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "/assets/catalogo-personalizados/07-bandeja-renda-1200.webp",
+          "width": 1200,
+          "height": 1200
+        }
+      ],
+      "imageKind": "ai_generated_product_concept",
+      "productionStatus": "prototype_to_validate",
+      "stock": {
+        "quantity": null,
+        "verifiedAt": null,
+        "source": null
+      },
+      "specifications": {
+        "material": null,
+        "dimensionsMm": null,
+        "productionDays": null,
+        "piecesPerKit": null
+      },
+      "cost": {
+        "unitCents": null,
+        "setupCents": null,
+        "fixedFeeCents": null,
+        "paymentFeeBps": null,
+        "taxBps": null,
+        "targetContributionBps": null
+      },
+      "pricingResearch": {
+        "asOf": "2026-10-15",
+        "confidence": "low",
+        "retailTargetCents": 21990,
+        "bulkTargets": [
+          {
+            "minimumQuantity": 5,
+            "unitTargetCents": 19990
+          },
+          {
+            "minimumQuantity": 10,
+            "unitTargetCents": 17990
+          },
+          {
+            "minimumQuantity": 25,
+            "unitTargetCents": 16990
+          }
+        ],
+        "status": "proposal_not_approved",
+        "basis": "Modelo equivalente a validar; sem frete; não é oferta comercial"
+      },
+      "approvedOffers": []
+    },
+    {
+      "id": "bandeja-personalizada",
+      "familyId": "up-bandejas",
+      "sku": "UP-PERS-08",
+      "label": "Monograma",
+      "title": "Bandeja personalizada com iniciais ou monograma",
+      "description": "Uma proposta para levar iniciais, monograma ou nome à decoração. Envie a personalização e as medidas desejadas para consultar o acabamento e a quantidade.",
+      "alt": "Conceito de bandeja transparente com iniciais e desenho de folhas.",
+      "images": [
+        {
+          "src": "/assets/catalogo-personalizados/08-bandeja-personalizada-400.webp",
+          "width": 400,
+          "height": 400
+        },
+        {
+          "src": "/assets/catalogo-personalizados/08-bandeja-personalizada-800.webp",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "/assets/catalogo-personalizados/08-bandeja-personalizada-1200.webp",
+          "width": 1200,
+          "height": 1200
+        }
+      ],
+      "imageKind": "ai_generated_product_concept",
+      "productionStatus": "prototype_to_validate",
+      "stock": {
+        "quantity": null,
+        "verifiedAt": null,
+        "source": null
+      },
+      "specifications": {
+        "material": null,
+        "dimensionsMm": null,
+        "productionDays": null,
+        "piecesPerKit": null
+      },
+      "cost": {
+        "unitCents": null,
+        "setupCents": null,
+        "fixedFeeCents": null,
+        "paymentFeeBps": null,
+        "taxBps": null,
+        "targetContributionBps": null
+      },
+      "pricingResearch": {
+        "asOf": "2026-10-15",
+        "confidence": "medium",
+        "retailTargetCents": 18990,
+        "bulkTargets": [
+          {
+            "minimumQuantity": 5,
+            "unitTargetCents": 16990
+          },
+          {
+            "minimumQuantity": 10,
+            "unitTargetCents": 15990
+          },
+          {
+            "minimumQuantity": 25,
+            "unitTargetCents": 14990
+          }
+        ],
+        "status": "proposal_not_approved",
+        "basis": "Modelo equivalente a validar; sem frete; não é oferta comercial"
+      },
+      "approvedOffers": []
+    },
+    {
+      "id": "bandeja-cafe",
+      "familyId": "up-bandejas",
+      "sku": "UP-PERS-09",
+      "label": "Café",
+      "title": "Bandeja decorativa para cantinho do café",
+      "description": "Uma peça pensada para compor o cantinho do café e organizar seus objetos. Consulte a frase, as medidas e o acabamento que deseja para o seu ambiente.",
+      "alt": "Conceito de bandeja transparente com a palavra Café e desenhos de xícaras.",
+      "images": [
+        {
+          "src": "/assets/catalogo-personalizados/09-bandeja-cafe-400.webp",
+          "width": 400,
+          "height": 400
+        },
+        {
+          "src": "/assets/catalogo-personalizados/09-bandeja-cafe-800.webp",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "/assets/catalogo-personalizados/09-bandeja-cafe-1200.webp",
+          "width": 1200,
+          "height": 1200
+        }
+      ],
+      "imageKind": "ai_generated_product_concept",
+      "productionStatus": "prototype_to_validate",
+      "stock": {
+        "quantity": null,
+        "verifiedAt": null,
+        "source": null
+      },
+      "specifications": {
+        "material": null,
+        "dimensionsMm": null,
+        "productionDays": null,
+        "piecesPerKit": null
+      },
+      "cost": {
+        "unitCents": null,
+        "setupCents": null,
+        "fixedFeeCents": null,
+        "paymentFeeBps": null,
+        "taxBps": null,
+        "targetContributionBps": null
+      },
+      "pricingResearch": {
+        "asOf": "2026-10-15",
+        "confidence": "medium",
+        "retailTargetCents": 17990,
+        "bulkTargets": [
+          {
+            "minimumQuantity": 5,
+            "unitTargetCents": 15990
+          },
+          {
+            "minimumQuantity": 10,
+            "unitTargetCents": 14990
+          },
+          {
+            "minimumQuantity": 25,
+            "unitTargetCents": 13990
+          }
+        ],
+        "status": "proposal_not_approved",
+        "basis": "Modelo equivalente a validar; sem frete; não é oferta comercial"
+      },
+      "approvedOffers": []
+    },
+    {
+      "id": "mexedor-coracao",
+      "familyId": "up-mexedores",
+      "sku": "UP-PERS-10",
+      "label": "Coração",
+      "title": "Mexedor de drink em formato de coração",
+      "description": "Um modelo de coração para compor os detalhes da festa. Informe a quantidade e a cor desejadas para avaliarmos comprimento, material e produção.",
+      "alt": "Conceito de mexedores com corações em tons de rosa e vermelho.",
+      "images": [
+        {
+          "src": "/assets/catalogo-personalizados/10-mexedor-coracao-400.webp",
+          "width": 400,
+          "height": 400
+        },
+        {
+          "src": "/assets/catalogo-personalizados/10-mexedor-coracao-800.webp",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "/assets/catalogo-personalizados/10-mexedor-coracao-1200.webp",
+          "width": 1200,
+          "height": 1200
+        }
+      ],
+      "imageKind": "ai_generated_product_concept",
+      "productionStatus": "prototype_to_validate",
+      "stock": {
+        "quantity": null,
+        "verifiedAt": null,
+        "source": null
+      },
+      "specifications": {
+        "material": null,
+        "dimensionsMm": null,
+        "productionDays": null,
+        "piecesPerKit": null
+      },
+      "cost": {
+        "unitCents": null,
+        "setupCents": null,
+        "fixedFeeCents": null,
+        "paymentFeeBps": null,
+        "taxBps": null,
+        "targetContributionBps": null
+      },
+      "pricingResearch": {
+        "asOf": "2026-10-15",
+        "confidence": "medium",
+        "retailTargetCents": 690,
+        "bulkTargets": [
+          {
+            "minimumQuantity": 10,
+            "unitTargetCents": 490
+          },
+          {
+            "minimumQuantity": 50,
+            "unitTargetCents": 299
+          },
+          {
+            "minimumQuantity": 100,
+            "unitTargetCents": 269
+          }
+        ],
+        "status": "proposal_not_approved",
+        "basis": "Modelo equivalente a validar; sem frete; não é oferta comercial"
+      },
+      "approvedOffers": []
+    },
+    {
+      "id": "mexedor-casamento",
+      "familyId": "up-mexedores",
+      "sku": "UP-PERS-11",
+      "label": "Coração com iniciais",
+      "title": "Mexedor de drink personalizado com iniciais",
+      "description": "Iniciais para acompanhar a identidade visual do casamento ou evento. Envie o monograma e a quantidade; as medidas e as condições de uso serão confirmadas no orçamento.",
+      "alt": "Conceito de mexedores com coração e iniciais em acabamentos transparentes e coloridos.",
+      "images": [
+        {
+          "src": "/assets/catalogo-personalizados/11-mexedor-casamento-400.webp",
+          "width": 400,
+          "height": 400
+        },
+        {
+          "src": "/assets/catalogo-personalizados/11-mexedor-casamento-800.webp",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "/assets/catalogo-personalizados/11-mexedor-casamento-1200.webp",
+          "width": 1200,
+          "height": 1200
+        }
+      ],
+      "imageKind": "ai_generated_product_concept",
+      "productionStatus": "prototype_to_validate",
+      "stock": {
+        "quantity": null,
+        "verifiedAt": null,
+        "source": null
+      },
+      "specifications": {
+        "material": null,
+        "dimensionsMm": null,
+        "productionDays": null,
+        "piecesPerKit": null
+      },
+      "cost": {
+        "unitCents": null,
+        "setupCents": null,
+        "fixedFeeCents": null,
+        "paymentFeeBps": null,
+        "taxBps": null,
+        "targetContributionBps": null
+      },
+      "pricingResearch": {
+        "asOf": "2026-10-15",
+        "confidence": "medium",
+        "retailTargetCents": 890,
+        "bulkTargets": [
+          {
+            "minimumQuantity": 10,
+            "unitTargetCents": 590
+          },
+          {
+            "minimumQuantity": 50,
+            "unitTargetCents": 390
+          },
+          {
+            "minimumQuantity": 100,
+            "unitTargetCents": 349
+          }
+        ],
+        "status": "proposal_not_approved",
+        "basis": "Modelo equivalente a validar; sem frete; não é oferta comercial"
+      },
+      "approvedOffers": []
+    },
+    {
+      "id": "kit-mexedores-marcadores",
+      "familyId": "up-kits-eventos",
+      "sku": "UP-PERS-12",
+      "label": "Monograma",
+      "title": "Kit de mexedores e marcadores de taça personalizados",
+      "description": "Uma proposta de conjunto com a mesma identidade para mexedores e marcadores. Informe quantos itens deseja em cada kit e quantos kits precisa; composição, encaixe e acabamento serão confirmados.",
+      "alt": "Conceito de conjunto de mexedores e marcadores de taça com monograma.",
+      "images": [
+        {
+          "src": "/assets/catalogo-personalizados/12-kit-mexedores-marcadores-400.webp",
+          "width": 400,
+          "height": 400
+        },
+        {
+          "src": "/assets/catalogo-personalizados/12-kit-mexedores-marcadores-800.webp",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "/assets/catalogo-personalizados/12-kit-mexedores-marcadores-1200.webp",
+          "width": 1200,
+          "height": 1200
+        }
+      ],
+      "imageKind": "ai_generated_product_concept",
+      "productionStatus": "prototype_to_validate",
+      "stock": {
+        "quantity": null,
+        "verifiedAt": null,
+        "source": null
+      },
+      "specifications": {
+        "material": null,
+        "dimensionsMm": null,
+        "productionDays": null,
+        "piecesPerKit": null
+      },
+      "cost": {
+        "unitCents": null,
+        "setupCents": null,
+        "fixedFeeCents": null,
+        "paymentFeeBps": null,
+        "taxBps": null,
+        "targetContributionBps": null
+      },
+      "pricingResearch": {
+        "asOf": "2026-10-15",
+        "confidence": "low",
+        "retailTargetCents": null,
+        "bulkTargets": [],
+        "status": "proposal_not_approved",
+        "basis": "Modelo equivalente a validar; sem frete; não é oferta comercial"
+      },
+      "approvedOffers": []
+    },
+    {
+      "id": "chaveiro-fe",
+      "familyId": "up-chaveiro-fe",
+      "sku": "UP-PERS-13",
+      "label": "Símbolos",
+      "title": "Chaveiro Fé com coração e cruz",
+      "description": "Uma proposta de lembrança com a palavra Fé e os símbolos de coração e cruz. Consulte a cor, o tamanho e a quantidade desejada para avaliarmos a produção.",
+      "alt": "Conceito de chaveiro azul com a palavra Fé, cruz e coração vazado.",
+      "images": [
+        {
+          "src": "/assets/catalogo-personalizados/13-chaveiro-fe-400.webp",
+          "width": 400,
+          "height": 400
+        },
+        {
+          "src": "/assets/catalogo-personalizados/13-chaveiro-fe-800.webp",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "/assets/catalogo-personalizados/13-chaveiro-fe-1200.webp",
+          "width": 1200,
+          "height": 1200
+        }
+      ],
+      "imageKind": "ai_generated_product_concept",
+      "productionStatus": "prototype_to_validate",
+      "stock": {
+        "quantity": null,
+        "verifiedAt": null,
+        "source": null
+      },
+      "specifications": {
+        "material": null,
+        "dimensionsMm": null,
+        "productionDays": null,
+        "piecesPerKit": null
+      },
+      "cost": {
+        "unitCents": null,
+        "setupCents": null,
+        "fixedFeeCents": null,
+        "paymentFeeBps": null,
+        "taxBps": null,
+        "targetContributionBps": null
+      },
+      "pricingResearch": {
+        "asOf": "2026-10-15",
+        "confidence": "low",
+        "retailTargetCents": 1490,
+        "bulkTargets": [
+          {
+            "minimumQuantity": 10,
+            "unitTargetCents": 1090
+          },
+          {
+            "minimumQuantity": 50,
+            "unitTargetCents": 890
+          },
+          {
+            "minimumQuantity": 100,
+            "unitTargetCents": 790
+          }
+        ],
+        "status": "proposal_not_approved",
+        "basis": "Modelo equivalente a validar; sem frete; não é oferta comercial"
+      },
+      "approvedOffers": []
+    },
+    {
+      "id": "marcador-pagina-personalizado",
+      "familyId": "up-marcadores-pagina",
+      "sku": "UP-MP-001",
+      "label": "Com nome",
+      "title": "Marcador de página personalizado",
+      "description": "Um marcador de página para presentear com um nome especial. A imagem ilustra o modelo dourado com recorte de coração e tassel; medidas, acabamento e produção serão confirmados no orçamento.",
+      "alt": "Modelo ilustrado em acrílico espelhado dourado, com recorte de coração, nome e tassel.",
+      "images": [
+        {
+          "src": "/assets/catalogo-personalizados/marcador-pagina-personalizado-400.webp",
+          "width": 400,
+          "height": 400
+        },
+        {
+          "src": "/assets/catalogo-personalizados/marcador-pagina-personalizado-800.webp",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "/assets/catalogo-personalizados/marcador-pagina-personalizado-1200.webp",
+          "width": 1200,
+          "height": 1200
+        }
+      ],
+      "imageKind": "ai_generated_product_concept",
+      "productionStatus": "prototype_to_validate",
+      "stock": {
+        "quantity": null,
+        "verifiedAt": null,
+        "source": null
+      },
+      "specifications": {
+        "material": null,
+        "dimensionsMm": null,
+        "productionDays": null,
+        "piecesPerKit": null
+      },
+      "cost": {
+        "unitCents": null,
+        "setupCents": null,
+        "fixedFeeCents": null,
+        "paymentFeeBps": null,
+        "taxBps": null,
+        "targetContributionBps": null
+      },
+      "pricingResearch": {
+        "asOf": "2026-10-15",
+        "confidence": "owner_supplied",
+        "retailTargetCents": 1700,
+        "bulkTargets": [
+          {
+            "minimumQuantity": 11,
+            "unitTargetCents": 950
+          }
+        ],
+        "status": "owner_provided_reference",
+        "basis": "Preços informados na atualização; acima de 10 unidades significa 11 ou mais do mesmo modelo."
+      },
+      "providedPricing": {
+        "retailCents": 1700,
+        "bulkMinimumQuantity": 11,
+        "bulkUnitCents": 950,
+        "bulkCondition": "Acima de 10 unidades",
+        "mixedModelsAllowed": false,
+        "sourceDate": "2026-10-15"
+      },
+      "approvedOffers": []
+    },
+    {
+      "id": "mexedor-drink-com-nome",
+      "familyId": "up-mexedores",
+      "sku": "UP-MX-001",
+      "label": "Com nome recortado",
+      "title": "Mexedor de drink personalizado",
+      "description": "Um nome para acompanhar a identidade do seu evento. A imagem ilustra um mexedor azul com nome recortado no topo; tamanho, material, acabamento e condições de uso serão confirmados no orçamento.",
+      "alt": "Modelo ilustrado em acrílico azul, com nome recortado no topo.",
+      "images": [
+        {
+          "src": "/assets/catalogo-personalizados/mexedor-drink-com-nome-400.webp",
+          "width": 400,
+          "height": 400
+        },
+        {
+          "src": "/assets/catalogo-personalizados/mexedor-drink-com-nome-800.webp",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "/assets/catalogo-personalizados/mexedor-drink-com-nome-1200.webp",
+          "width": 1200,
+          "height": 1200
+        }
+      ],
+      "imageKind": "ai_generated_product_concept",
+      "productionStatus": "prototype_to_validate",
+      "stock": {
+        "quantity": null,
+        "verifiedAt": null,
+        "source": null
+      },
+      "specifications": {
+        "material": null,
+        "dimensionsMm": null,
+        "productionDays": null,
+        "piecesPerKit": null
+      },
+      "cost": {
+        "unitCents": null,
+        "setupCents": null,
+        "fixedFeeCents": null,
+        "paymentFeeBps": null,
+        "taxBps": null,
+        "targetContributionBps": null
+      },
+      "pricingResearch": {
+        "asOf": "2026-10-15",
+        "confidence": "owner_supplied",
+        "retailTargetCents": 800,
+        "bulkTargets": [
+          {
+            "minimumQuantity": 11,
+            "unitTargetCents": 650
+          }
+        ],
+        "status": "owner_provided_reference",
+        "basis": "Preços informados na atualização; acima de 10 unidades significa 11 ou mais do mesmo modelo."
+      },
+      "providedPricing": {
+        "retailCents": 800,
+        "bulkMinimumQuantity": 11,
+        "bulkUnitCents": 650,
+        "bulkCondition": "Acima de 10 unidades",
+        "mixedModelsAllowed": false,
+        "sourceDate": "2026-10-15"
+      },
+      "approvedOffers": []
+    },
+    {
+      "id": "marcador-taca-formato-taca",
+      "familyId": "up-marcadores-taca",
+      "sku": "UP-MT-001",
+      "label": "Formato taça",
+      "title": "Marcador de taça personalizado — formato taça",
+      "description": "Um marcador para identificar a taça com uma inicial. A imagem ilustra o acessório dourado em formato de taça com corrente de bolinhas. O produto é o marcador e não inclui uma taça de vidro; medidas e produção serão confirmadas.",
+      "alt": "Modelo ilustrado em acrílico espelhado dourado, com inicial e corrente de bolinhas.",
+      "images": [
+        {
+          "src": "/assets/catalogo-personalizados/marcador-taca-formato-taca-400.webp",
+          "width": 400,
+          "height": 400
+        },
+        {
+          "src": "/assets/catalogo-personalizados/marcador-taca-formato-taca-800.webp",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "/assets/catalogo-personalizados/marcador-taca-formato-taca-1200.webp",
+          "width": 1200,
+          "height": 1200
+        }
+      ],
+      "imageKind": "ai_generated_product_concept",
+      "productionStatus": "prototype_to_validate",
+      "stock": {
+        "quantity": null,
+        "verifiedAt": null,
+        "source": null
+      },
+      "specifications": {
+        "material": null,
+        "dimensionsMm": null,
+        "productionDays": null,
+        "piecesPerKit": null
+      },
+      "cost": {
+        "unitCents": null,
+        "setupCents": null,
+        "fixedFeeCents": null,
+        "paymentFeeBps": null,
+        "taxBps": null,
+        "targetContributionBps": null
+      },
+      "pricingResearch": {
+        "asOf": "2026-10-15",
+        "confidence": "owner_supplied",
+        "retailTargetCents": 800,
+        "bulkTargets": [
+          {
+            "minimumQuantity": 11,
+            "unitTargetCents": 560
+          }
+        ],
+        "status": "owner_provided_reference",
+        "basis": "Preços informados na atualização; acima de 10 unidades significa 11 ou mais do mesmo modelo."
+      },
+      "providedPricing": {
+        "retailCents": 800,
+        "bulkMinimumQuantity": 11,
+        "bulkUnitCents": 560,
+        "bulkCondition": "Acima de 10 unidades",
+        "mixedModelsAllowed": false,
+        "sourceDate": "2026-10-15"
+      },
+      "approvedOffers": []
+    },
+    {
+      "id": "up-r2-cracha-dourado",
+      "familyId": "up-identificacao-personalizada",
+      "sku": "UP-R2-001",
+      "label": "Crachás",
+      "title": "Crachá dourado personalizado",
+      "description": "Identifique sua equipe com nome e função em um crachá personalizado. O modelo ilustrado apresenta acabamento dourado.",
+      "alt": "Imagem ilustrativa: crachá dourado personalizado.",
+      "images": [
+        {
+          "src": "/assets/catalogo-personalizados/r2-cracha-dourado-400.webp",
+          "width": 400,
+          "height": 400
+        },
+        {
+          "src": "/assets/catalogo-personalizados/r2-cracha-dourado-800.webp",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "/assets/catalogo-personalizados/r2-cracha-dourado-1254.webp",
+          "width": 1254,
+          "height": 1254
+        }
+      ],
+      "imageKind": "illustrative_mockup",
+      "productionStatus": "prototype_to_validate",
+      "stock": {
+        "quantity": null,
+        "verifiedAt": null,
+        "source": null
+      },
+      "specifications": {
+        "material": null,
+        "dimensionsMm": null,
+        "productionDays": null,
+        "piecesPerKit": null
+      },
+      "cost": {
+        "unitCents": null,
+        "setupCents": null,
+        "fixedFeeCents": null,
+        "paymentFeeBps": null,
+        "taxBps": null,
+        "targetContributionBps": null
+      },
+      "pricingPlan": {
+        "retailCents": null,
+        "tiers": [],
+        "status": "draft"
+      },
+      "pricingResearch": {
+        "status": "not_researched",
+        "retailTargetCents": null,
+        "bulkTargets": [],
+        "sources": []
+      },
+      "approvedOffers": [],
+      "unit": "unit",
+      "configurationFields": [
+        {
+          "key": "name",
+          "label": "Nome no crachá",
+          "type": "text",
+          "required": true,
+          "placeholder": "Ex.: Ana Souza"
+        },
+        {
+          "key": "role",
+          "label": "Cargo ou profissão",
+          "type": "text",
+          "required": false,
+          "placeholder": "Ex.: Fisioterapeuta"
+        },
+        {
+          "key": "notes",
+          "label": "Observações",
+          "type": "textarea",
+          "required": false,
+          "placeholder": ""
+        }
+      ],
+      "variants": [
+        {
+          "id": "padrao",
+          "label": "Modelo",
+          "configuration": {},
+          "alt": "Imagem ilustrativa: crachá dourado personalizado.",
+          "images": [
+            {
+              "src": "/assets/catalogo-personalizados/r2-cracha-dourado-400.webp",
+              "width": 400,
+              "height": 400
+            },
+            {
+              "src": "/assets/catalogo-personalizados/r2-cracha-dourado-800.webp",
+              "width": 800,
+              "height": 800
+            },
+            {
+              "src": "/assets/catalogo-personalizados/r2-cracha-dourado-1254.webp",
+              "width": 1254,
+              "height": 1254
+            }
+          ]
+        }
+      ],
+      "defaultVariant": "padrao",
+      "importSource": "cracha-navio-2026-10-16",
+      "updatedAt": "2026-10-16T06:15:00.669Z"
+    },
+    {
+      "id": "up-r2-ponteira-natal-estrela",
+      "familyId": "up-natal",
+      "sku": "UP-R2-002",
+      "label": "Ponteiras",
+      "title": "Ponteira de árvore de Natal personalizada",
+      "description": "Ponteira de árvore de Natal em formato de estrela, com sobrenome personalizado e haste de encaixe.",
+      "alt": "Imagem ilustrativa: ponteira de árvore de Natal personalizada.",
+      "images": [
+        {
+          "src": "/assets/catalogo-personalizados/r2-ponteira-natal-estrela-400.webp",
+          "width": 400,
+          "height": 400
+        },
+        {
+          "src": "/assets/catalogo-personalizados/r2-ponteira-natal-estrela-800.webp",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "/assets/catalogo-personalizados/r2-ponteira-natal-estrela-1254.webp",
+          "width": 1254,
+          "height": 1254
+        }
+      ],
+      "imageKind": "illustrative_mockup",
+      "productionStatus": "prototype_to_validate",
+      "stock": {
+        "quantity": null,
+        "verifiedAt": null,
+        "source": null
+      },
+      "specifications": {
+        "material": null,
+        "dimensionsMm": null,
+        "productionDays": null,
+        "piecesPerKit": null
+      },
+      "cost": {
+        "unitCents": null,
+        "setupCents": null,
+        "fixedFeeCents": null,
+        "paymentFeeBps": null,
+        "taxBps": null,
+        "targetContributionBps": null
+      },
+      "pricingPlan": {
+        "retailCents": null,
+        "tiers": [],
+        "status": "draft"
+      },
+      "pricingResearch": {
+        "status": "not_researched",
+        "retailTargetCents": null,
+        "bulkTargets": [],
+        "sources": []
+      },
+      "approvedOffers": [],
+      "unit": "unit",
+      "configurationFields": [
+        {
+          "key": "familyName",
+          "label": "Sobrenome da família",
+          "type": "text",
+          "required": true,
+          "placeholder": "Ex.: Costa"
+        },
+        {
+          "key": "notes",
+          "label": "Observações",
+          "type": "textarea",
+          "required": false,
+          "placeholder": ""
+        }
+      ],
+      "variants": [
+        {
+          "id": "padrao",
+          "label": "Modelo",
+          "configuration": {},
+          "alt": "Imagem ilustrativa: ponteira de árvore de Natal personalizada.",
+          "images": [
+            {
+              "src": "/assets/catalogo-personalizados/r2-ponteira-natal-estrela-400.webp",
+              "width": 400,
+              "height": 400
+            },
+            {
+              "src": "/assets/catalogo-personalizados/r2-ponteira-natal-estrela-800.webp",
+              "width": 800,
+              "height": 800
+            },
+            {
+              "src": "/assets/catalogo-personalizados/r2-ponteira-natal-estrela-1254.webp",
+              "width": 1254,
+              "height": 1254
+            }
+          ]
+        }
+      ],
+      "defaultVariant": "padrao",
+      "importSource": "cracha-navio-2026-10-16",
+      "updatedAt": "2026-10-16T06:15:00.669Z"
+    },
+    {
+      "id": "up-r2-display-medicina",
+      "familyId": "up-decoracao",
+      "sku": "UP-R2-003",
+      "label": "Displays de mesa",
+      "title": "Display de mesa: medicina",
+      "description": "Display decorativo com desenho linear de medicina. A composição ilustrada apresenta peça transparente sobre base amadeirada.",
+      "alt": "Imagem ilustrativa: display de mesa em acrílico — medicina.",
+      "images": [
+        {
+          "src": "/assets/catalogo-personalizados/r2-display-medicina-400.webp",
+          "width": 400,
+          "height": 400
+        },
+        {
+          "src": "/assets/catalogo-personalizados/r2-display-medicina-800.webp",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "/assets/catalogo-personalizados/r2-display-medicina-1254.webp",
+          "width": 1254,
+          "height": 1254
+        }
+      ],
+      "imageKind": "illustrative_mockup",
+      "productionStatus": "prototype_to_validate",
+      "stock": {
+        "quantity": null,
+        "verifiedAt": null,
+        "source": null
+      },
+      "specifications": {
+        "material": null,
+        "dimensionsMm": null,
+        "productionDays": null,
+        "piecesPerKit": null
+      },
+      "cost": {
+        "unitCents": null,
+        "setupCents": null,
+        "fixedFeeCents": null,
+        "paymentFeeBps": null,
+        "taxBps": null,
+        "targetContributionBps": null
+      },
+      "pricingPlan": {
+        "retailCents": null,
+        "tiers": [],
+        "status": "draft"
+      },
+      "pricingResearch": {
+        "status": "not_researched",
+        "retailTargetCents": null,
+        "bulkTargets": [],
+        "sources": []
+      },
+      "approvedOffers": [],
+      "unit": "unit",
+      "configurationFields": [
+        {
+          "key": "notes",
+          "label": "Observações",
+          "type": "textarea",
+          "required": false,
+          "placeholder": ""
+        }
+      ],
+      "variants": [
+        {
+          "id": "padrao",
+          "label": "Modelo",
+          "configuration": {},
+          "alt": "Imagem ilustrativa: display de mesa em acrílico — medicina.",
+          "images": [
+            {
+              "src": "/assets/catalogo-personalizados/r2-display-medicina-400.webp",
+              "width": 400,
+              "height": 400
+            },
+            {
+              "src": "/assets/catalogo-personalizados/r2-display-medicina-800.webp",
+              "width": 800,
+              "height": 800
+            },
+            {
+              "src": "/assets/catalogo-personalizados/r2-display-medicina-1254.webp",
+              "width": 1254,
+              "height": 1254
+            }
+          ]
+        }
+      ],
+      "defaultVariant": "padrao",
+      "importSource": "cracha-navio-2026-10-16",
+      "updatedAt": "2026-10-16T06:15:00.669Z"
+    },
+    {
+      "id": "up-r2-arvore-natal-familia",
+      "familyId": "up-natal",
+      "sku": "UP-R2-004",
+      "label": "Árvores de mesa",
+      "title": "Árvore de Natal de mesa com nomes",
+      "description": "Árvore de Natal de mesa com nomes integrados ao desenho e acabamento dourado no modelo ilustrado.",
+      "alt": "Imagem ilustrativa: árvore de Natal de mesa personalizada.",
+      "images": [
+        {
+          "src": "/assets/catalogo-personalizados/r2-arvore-natal-familia-400.webp",
+          "width": 400,
+          "height": 400
+        },
+        {
+          "src": "/assets/catalogo-personalizados/r2-arvore-natal-familia-800.webp",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "/assets/catalogo-personalizados/r2-arvore-natal-familia-1254.webp",
+          "width": 1254,
+          "height": 1254
+        }
+      ],
+      "imageKind": "illustrative_mockup",
+      "productionStatus": "prototype_to_validate",
+      "stock": {
+        "quantity": null,
+        "verifiedAt": null,
+        "source": null
+      },
+      "specifications": {
+        "material": null,
+        "dimensionsMm": null,
+        "productionDays": null,
+        "piecesPerKit": null
+      },
+      "cost": {
+        "unitCents": null,
+        "setupCents": null,
+        "fixedFeeCents": null,
+        "paymentFeeBps": null,
+        "taxBps": null,
+        "targetContributionBps": null
+      },
+      "pricingPlan": {
+        "retailCents": null,
+        "tiers": [],
+        "status": "draft"
+      },
+      "pricingResearch": {
+        "status": "not_researched",
+        "retailTargetCents": null,
+        "bulkTargets": [],
+        "sources": []
+      },
+      "approvedOffers": [],
+      "unit": "unit",
+      "configurationFields": [
+        {
+          "key": "names",
+          "label": "Nomes da família",
+          "type": "text",
+          "required": true,
+          "placeholder": "Informe os nomes na ordem desejada"
+        },
+        {
+          "key": "notes",
+          "label": "Observações",
+          "type": "textarea",
+          "required": false,
+          "placeholder": ""
+        }
+      ],
+      "variants": [
+        {
+          "id": "padrao",
+          "label": "Modelo",
+          "configuration": {},
+          "alt": "Imagem ilustrativa: árvore de Natal de mesa personalizada.",
+          "images": [
+            {
+              "src": "/assets/catalogo-personalizados/r2-arvore-natal-familia-400.webp",
+              "width": 400,
+              "height": 400
+            },
+            {
+              "src": "/assets/catalogo-personalizados/r2-arvore-natal-familia-800.webp",
+              "width": 800,
+              "height": 800
+            },
+            {
+              "src": "/assets/catalogo-personalizados/r2-arvore-natal-familia-1254.webp",
+              "width": 1254,
+              "height": 1254
+            }
+          ]
+        }
+      ],
+      "defaultVariant": "padrao",
+      "importSource": "cracha-navio-2026-10-16",
+      "updatedAt": "2026-10-16T06:15:00.669Z"
+    },
+    {
+      "id": "up-r2-porta-copo-monograma",
+      "familyId": "up-utilidades",
+      "sku": "UP-R2-005",
+      "label": "Porta-copos",
+      "title": "Porta-copo transparente com monograma",
+      "description": "Porta-copo circular com visual transparente e monograma dourado. Personalize as iniciais do seu modelo.",
+      "alt": "Imagem ilustrativa: porta-copo transparente com monograma.",
+      "images": [
+        {
+          "src": "/assets/catalogo-personalizados/r2-porta-copo-monograma-400.webp",
+          "width": 400,
+          "height": 400
+        },
+        {
+          "src": "/assets/catalogo-personalizados/r2-porta-copo-monograma-800.webp",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "/assets/catalogo-personalizados/r2-porta-copo-monograma-1254.webp",
+          "width": 1254,
+          "height": 1254
+        }
+      ],
+      "imageKind": "illustrative_mockup",
+      "productionStatus": "prototype_to_validate",
+      "stock": {
+        "quantity": null,
+        "verifiedAt": null,
+        "source": null
+      },
+      "specifications": {
+        "material": null,
+        "dimensionsMm": null,
+        "productionDays": null,
+        "piecesPerKit": null
+      },
+      "cost": {
+        "unitCents": null,
+        "setupCents": null,
+        "fixedFeeCents": null,
+        "paymentFeeBps": null,
+        "taxBps": null,
+        "targetContributionBps": null
+      },
+      "pricingPlan": {
+        "retailCents": null,
+        "tiers": [],
+        "status": "draft"
+      },
+      "pricingResearch": {
+        "status": "not_researched",
+        "retailTargetCents": null,
+        "bulkTargets": [],
+        "sources": []
+      },
+      "approvedOffers": [],
+      "unit": "unit",
+      "configurationFields": [
+        {
+          "key": "initials",
+          "label": "Iniciais do monograma",
+          "type": "text",
+          "required": true,
+          "placeholder": "Ex.: AL"
+        },
+        {
+          "key": "notes",
+          "label": "Observações",
+          "type": "textarea",
+          "required": false,
+          "placeholder": ""
+        }
+      ],
+      "variants": [
+        {
+          "id": "padrao",
+          "label": "Modelo",
+          "configuration": {},
+          "alt": "Imagem ilustrativa: porta-copo transparente com monograma.",
+          "images": [
+            {
+              "src": "/assets/catalogo-personalizados/r2-porta-copo-monograma-400.webp",
+              "width": 400,
+              "height": 400
+            },
+            {
+              "src": "/assets/catalogo-personalizados/r2-porta-copo-monograma-800.webp",
+              "width": 800,
+              "height": 800
+            },
+            {
+              "src": "/assets/catalogo-personalizados/r2-porta-copo-monograma-1254.webp",
+              "width": 1254,
+              "height": 1254
+            }
+          ]
+        }
+      ],
+      "defaultVariant": "padrao",
+      "importSource": "cracha-navio-2026-10-16",
+      "updatedAt": "2026-10-16T06:15:00.669Z"
+    },
+    {
+      "id": "up-r2-enfeite-porta-natalino",
+      "familyId": "up-natal",
+      "sku": "UP-R2-006",
+      "label": "Enfeites de porta",
+      "title": "Enfeite de porta natalino",
+      "description": "Enfeite circular de porta com estampa natalina, mensagem Feliz Natal e cordão para pendurar.",
+      "alt": "Imagem ilustrativa: enfeite de porta natalino.",
+      "images": [
+        {
+          "src": "/assets/catalogo-personalizados/r2-enfeite-porta-natalino-400.webp",
+          "width": 400,
+          "height": 400
+        },
+        {
+          "src": "/assets/catalogo-personalizados/r2-enfeite-porta-natalino-800.webp",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "/assets/catalogo-personalizados/r2-enfeite-porta-natalino-1254.webp",
+          "width": 1254,
+          "height": 1254
+        }
+      ],
+      "imageKind": "illustrative_mockup",
+      "productionStatus": "prototype_to_validate",
+      "stock": {
+        "quantity": null,
+        "verifiedAt": null,
+        "source": null
+      },
+      "specifications": {
+        "material": null,
+        "dimensionsMm": null,
+        "productionDays": null,
+        "piecesPerKit": null
+      },
+      "cost": {
+        "unitCents": null,
+        "setupCents": null,
+        "fixedFeeCents": null,
+        "paymentFeeBps": null,
+        "taxBps": null,
+        "targetContributionBps": null
+      },
+      "pricingPlan": {
+        "retailCents": null,
+        "tiers": [],
+        "status": "draft"
+      },
+      "pricingResearch": {
+        "status": "not_researched",
+        "retailTargetCents": null,
+        "bulkTargets": [],
+        "sources": []
+      },
+      "approvedOffers": [],
+      "unit": "unit",
+      "configurationFields": [
+        {
+          "key": "notes",
+          "label": "Observações",
+          "type": "textarea",
+          "required": false,
+          "placeholder": ""
+        }
+      ],
+      "variants": [
+        {
+          "id": "padrao",
+          "label": "Modelo",
+          "configuration": {},
+          "alt": "Imagem ilustrativa: enfeite de porta natalino.",
+          "images": [
+            {
+              "src": "/assets/catalogo-personalizados/r2-enfeite-porta-natalino-400.webp",
+              "width": 400,
+              "height": 400
+            },
+            {
+              "src": "/assets/catalogo-personalizados/r2-enfeite-porta-natalino-800.webp",
+              "width": 800,
+              "height": 800
+            },
+            {
+              "src": "/assets/catalogo-personalizados/r2-enfeite-porta-natalino-1254.webp",
+              "width": 1254,
+              "height": 1254
+            }
+          ]
+        }
+      ],
+      "defaultVariant": "padrao",
+      "importSource": "cracha-navio-2026-10-16",
+      "updatedAt": "2026-10-16T06:15:00.669Z"
+    },
+    {
+      "id": "up-r2-enfeite-natal-pet",
+      "familyId": "up-natal",
+      "sku": "UP-R2-007",
+      "label": "Enfeites para pet",
+      "title": "Enfeite natalino para pet",
+      "description": "Enfeite em formato de patinha, personalizado com o nome do pet. Escolha o acabamento amadeirado e preto ou branco e dourado.",
+      "alt": "Imagem ilustrativa: enfeite de Natal para pet — amadeirado.",
+      "images": [
+        {
+          "src": "/assets/catalogo-personalizados/r2-enfeite-patinha-amadeirado-400.webp",
+          "width": 400,
+          "height": 400
+        },
+        {
+          "src": "/assets/catalogo-personalizados/r2-enfeite-patinha-amadeirado-800.webp",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "/assets/catalogo-personalizados/r2-enfeite-patinha-amadeirado-1254.webp",
+          "width": 1254,
+          "height": 1254
+        }
+      ],
+      "imageKind": "illustrative_mockup",
+      "productionStatus": "prototype_to_validate",
+      "stock": {
+        "quantity": null,
+        "verifiedAt": null,
+        "source": null
+      },
+      "specifications": {
+        "material": null,
+        "dimensionsMm": null,
+        "productionDays": null,
+        "piecesPerKit": null
+      },
+      "cost": {
+        "unitCents": null,
+        "setupCents": null,
+        "fixedFeeCents": null,
+        "paymentFeeBps": null,
+        "taxBps": null,
+        "targetContributionBps": null
+      },
+      "pricingPlan": {
+        "retailCents": null,
+        "tiers": [],
+        "status": "draft"
+      },
+      "pricingResearch": {
+        "status": "not_researched",
+        "retailTargetCents": null,
+        "bulkTargets": [],
+        "sources": []
+      },
+      "approvedOffers": [],
+      "unit": "unit",
+      "configurationFields": [
+        {
+          "key": "finish",
+          "label": "Acabamento",
+          "type": "text",
+          "required": true,
+          "placeholder": "",
+          "choices": [
+            {
+              "value": "amadeirado",
+              "label": "Amadeirado e preto"
+            },
+            {
+              "value": "branco-dourado",
+              "label": "Branco e dourado"
+            }
+          ]
+        },
+        {
+          "key": "petName",
+          "label": "Nome do pet",
+          "type": "text",
+          "required": true,
+          "placeholder": "Ex.: Luna"
+        },
+        {
+          "key": "notes",
+          "label": "Observações",
+          "type": "textarea",
+          "required": false,
+          "placeholder": ""
+        }
+      ],
+      "variants": [
+        {
+          "id": "amadeirado",
+          "label": "Amadeirado e preto",
+          "configuration": {
+            "finish": "amadeirado"
+          },
+          "alt": "Imagem ilustrativa: enfeite de Natal para pet — amadeirado.",
+          "images": [
+            {
+              "src": "/assets/catalogo-personalizados/r2-enfeite-patinha-amadeirado-400.webp",
+              "width": 400,
+              "height": 400
+            },
+            {
+              "src": "/assets/catalogo-personalizados/r2-enfeite-patinha-amadeirado-800.webp",
+              "width": 800,
+              "height": 800
+            },
+            {
+              "src": "/assets/catalogo-personalizados/r2-enfeite-patinha-amadeirado-1254.webp",
+              "width": 1254,
+              "height": 1254
+            }
+          ]
+        },
+        {
+          "id": "branco-dourado",
+          "label": "Branco e dourado",
+          "configuration": {
+            "finish": "branco-dourado"
+          },
+          "alt": "Imagem ilustrativa: enfeite de Natal para pet — branco e dourado.",
+          "images": [
+            {
+              "src": "/assets/catalogo-personalizados/r2-enfeite-patinha-branco-dourado-400.webp",
+              "width": 400,
+              "height": 400
+            },
+            {
+              "src": "/assets/catalogo-personalizados/r2-enfeite-patinha-branco-dourado-800.webp",
+              "width": 800,
+              "height": 800
+            },
+            {
+              "src": "/assets/catalogo-personalizados/r2-enfeite-patinha-branco-dourado-1254.webp",
+              "width": 1254,
+              "height": 1254
+            }
+          ]
+        }
+      ],
+      "defaultVariant": "amadeirado",
+      "importSource": "cracha-navio-2026-10-16",
+      "updatedAt": "2026-10-16T06:15:00.669Z"
+    },
+    {
+      "id": "up-r2-kit-porta-copos-colmeia",
+      "familyId": "up-utilidades",
+      "sku": "UP-R2-008",
+      "label": "Porta-copos",
+      "title": "Kit de porta-copos colmeia com suporte",
+      "description": "Conjunto de porta-copos com desenho de colmeia e suporte circular. A quantidade de peças do kit deve ser definida na consulta.",
+      "alt": "Imagem ilustrativa: kit de porta-copos colmeia com suporte.",
+      "images": [
+        {
+          "src": "/assets/catalogo-personalizados/r2-kit-porta-copos-colmeia-400.webp",
+          "width": 400,
+          "height": 400
+        },
+        {
+          "src": "/assets/catalogo-personalizados/r2-kit-porta-copos-colmeia-800.webp",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "/assets/catalogo-personalizados/r2-kit-porta-copos-colmeia-1254.webp",
+          "width": 1254,
+          "height": 1254
+        }
+      ],
+      "imageKind": "illustrative_mockup",
+      "productionStatus": "prototype_to_validate",
+      "stock": {
+        "quantity": null,
+        "verifiedAt": null,
+        "source": null
+      },
+      "specifications": {
+        "material": null,
+        "dimensionsMm": null,
+        "productionDays": null,
+        "piecesPerKit": null
+      },
+      "cost": {
+        "unitCents": null,
+        "setupCents": null,
+        "fixedFeeCents": null,
+        "paymentFeeBps": null,
+        "taxBps": null,
+        "targetContributionBps": null
+      },
+      "pricingPlan": {
+        "retailCents": null,
+        "tiers": [],
+        "status": "draft"
+      },
+      "pricingResearch": {
+        "status": "not_researched",
+        "retailTargetCents": null,
+        "bulkTargets": [],
+        "sources": []
+      },
+      "approvedOffers": [],
+      "unit": "kit",
+      "configurationFields": [
+        {
+          "key": "piecesPerKit",
+          "label": "Quantidade desejada de porta-copos no kit",
+          "type": "number",
+          "required": false,
+          "placeholder": ""
+        },
+        {
+          "key": "notes",
+          "label": "Observações",
+          "type": "textarea",
+          "required": false,
+          "placeholder": ""
+        }
+      ],
+      "variants": [
+        {
+          "id": "padrao",
+          "label": "Modelo",
+          "configuration": {},
+          "alt": "Imagem ilustrativa: kit de porta-copos colmeia com suporte.",
+          "images": [
+            {
+              "src": "/assets/catalogo-personalizados/r2-kit-porta-copos-colmeia-400.webp",
+              "width": 400,
+              "height": 400
+            },
+            {
+              "src": "/assets/catalogo-personalizados/r2-kit-porta-copos-colmeia-800.webp",
+              "width": 800,
+              "height": 800
+            },
+            {
+              "src": "/assets/catalogo-personalizados/r2-kit-porta-copos-colmeia-1254.webp",
+              "width": 1254,
+              "height": 1254
+            }
+          ]
+        }
+      ],
+      "defaultVariant": "padrao",
+      "importSource": "cracha-navio-2026-10-16",
+      "updatedAt": "2026-10-16T06:15:00.669Z"
+    },
+    {
+      "id": "up-r2-chaveiro-quarto-hotel",
+      "familyId": "up-identificacao-personalizada",
+      "sku": "UP-R2-009",
+      "label": "Hotelaria",
+      "title": "Chaveiro de identificação de quarto",
+      "description": "Chaveiro para identificação de quartos de hotéis e pousadas. O modelo ilustrado combina acabamento escuro com detalhe amadeirado.",
+      "alt": "Imagem ilustrativa: chaveiro de identificação de quarto — hotel.",
+      "images": [
+        {
+          "src": "/assets/catalogo-personalizados/r2-chaveiro-quarto-hotel-400.webp",
+          "width": 400,
+          "height": 400
+        },
+        {
+          "src": "/assets/catalogo-personalizados/r2-chaveiro-quarto-hotel-800.webp",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "/assets/catalogo-personalizados/r2-chaveiro-quarto-hotel-1254.webp",
+          "width": 1254,
+          "height": 1254
+        }
+      ],
+      "imageKind": "illustrative_mockup",
+      "productionStatus": "prototype_to_validate",
+      "stock": {
+        "quantity": null,
+        "verifiedAt": null,
+        "source": null
+      },
+      "specifications": {
+        "material": null,
+        "dimensionsMm": null,
+        "productionDays": null,
+        "piecesPerKit": null
+      },
+      "cost": {
+        "unitCents": null,
+        "setupCents": null,
+        "fixedFeeCents": null,
+        "paymentFeeBps": null,
+        "taxBps": null,
+        "targetContributionBps": null
+      },
+      "pricingPlan": {
+        "retailCents": null,
+        "tiers": [],
+        "status": "draft"
+      },
+      "pricingResearch": {
+        "status": "not_researched",
+        "retailTargetCents": null,
+        "bulkTargets": [],
+        "sources": []
+      },
+      "approvedOffers": [],
+      "unit": "unit",
+      "configurationFields": [
+        {
+          "key": "roomNumber",
+          "label": "Número ou identificação do quarto",
+          "type": "text",
+          "required": true,
+          "placeholder": "Ex.: 104 ou 001"
+        },
+        {
+          "key": "hotelName",
+          "label": "Nome do hotel ou pousada",
+          "type": "text",
+          "required": true,
+          "placeholder": "Ex.: Seu Hotel"
+        },
+        {
+          "key": "notes",
+          "label": "Observações",
+          "type": "textarea",
+          "required": false,
+          "placeholder": ""
+        }
+      ],
+      "variants": [
+        {
+          "id": "padrao",
+          "label": "Modelo",
+          "configuration": {},
+          "alt": "Imagem ilustrativa: chaveiro de identificação de quarto — hotel.",
+          "images": [
+            {
+              "src": "/assets/catalogo-personalizados/r2-chaveiro-quarto-hotel-400.webp",
+              "width": 400,
+              "height": 400
+            },
+            {
+              "src": "/assets/catalogo-personalizados/r2-chaveiro-quarto-hotel-800.webp",
+              "width": 800,
+              "height": 800
+            },
+            {
+              "src": "/assets/catalogo-personalizados/r2-chaveiro-quarto-hotel-1254.webp",
+              "width": 1254,
+              "height": 1254
+            }
+          ]
+        }
+      ],
+      "defaultVariant": "padrao",
+      "importSource": "cracha-navio-2026-10-16",
+      "updatedAt": "2026-10-16T06:15:00.669Z"
+    },
+    {
+      "id": "up-r2-cruz-mesa-jesus",
+      "familyId": "up-decoracao",
+      "sku": "UP-R2-010",
+      "label": "Decoração religiosa",
+      "title": "Cruz de mesa: Jesus",
+      "description": "Cruz decorativa de mesa com visual transparente, detalhe dourado e o nome Jesus no modelo ilustrado.",
+      "alt": "Imagem ilustrativa: cruz de mesa personalizada — Jesus.",
+      "images": [
+        {
+          "src": "/assets/catalogo-personalizados/r2-cruz-mesa-jesus-400.webp",
+          "width": 400,
+          "height": 400
+        },
+        {
+          "src": "/assets/catalogo-personalizados/r2-cruz-mesa-jesus-800.webp",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "/assets/catalogo-personalizados/r2-cruz-mesa-jesus-1254.webp",
+          "width": 1254,
+          "height": 1254
+        }
+      ],
+      "imageKind": "illustrative_mockup",
+      "productionStatus": "prototype_to_validate",
+      "stock": {
+        "quantity": null,
+        "verifiedAt": null,
+        "source": null
+      },
+      "specifications": {
+        "material": null,
+        "dimensionsMm": null,
+        "productionDays": null,
+        "piecesPerKit": null
+      },
+      "cost": {
+        "unitCents": null,
+        "setupCents": null,
+        "fixedFeeCents": null,
+        "paymentFeeBps": null,
+        "taxBps": null,
+        "targetContributionBps": null
+      },
+      "pricingPlan": {
+        "retailCents": null,
+        "tiers": [],
+        "status": "draft"
+      },
+      "pricingResearch": {
+        "status": "not_researched",
+        "retailTargetCents": null,
+        "bulkTargets": [],
+        "sources": []
+      },
+      "approvedOffers": [],
+      "unit": "unit",
+      "configurationFields": [
+        {
+          "key": "notes",
+          "label": "Observações",
+          "type": "textarea",
+          "required": false,
+          "placeholder": ""
+        }
+      ],
+      "variants": [
+        {
+          "id": "padrao",
+          "label": "Modelo",
+          "configuration": {},
+          "alt": "Imagem ilustrativa: cruz de mesa personalizada — Jesus.",
+          "images": [
+            {
+              "src": "/assets/catalogo-personalizados/r2-cruz-mesa-jesus-400.webp",
+              "width": 400,
+              "height": 400
+            },
+            {
+              "src": "/assets/catalogo-personalizados/r2-cruz-mesa-jesus-800.webp",
+              "width": 800,
+              "height": 800
+            },
+            {
+              "src": "/assets/catalogo-personalizados/r2-cruz-mesa-jesus-1254.webp",
+              "width": 1254,
+              "height": 1254
+            }
+          ]
+        }
+      ],
+      "defaultVariant": "padrao",
+      "importSource": "cracha-navio-2026-10-16",
+      "updatedAt": "2026-10-16T06:15:00.669Z"
+    },
+    {
+      "id": "up-r2-mini-enfeites-natalinos",
+      "familyId": "up-natal",
+      "sku": "UP-R2-011",
+      "label": "Tags e mini enfeites",
+      "title": "Mini enfeites natalinos dourados",
+      "description": "Mini enfeites natalinos dourados com furo para pendurar. Escolha entre redondo, borda recortada, quadrado, estrela, Papai Noel e árvore.",
+      "alt": "Imagem ilustrativa: mini enfeite natalino dourado — redondo.",
+      "images": [
+        {
+          "src": "/assets/catalogo-personalizados/r2-tag-natal-redonda-400.webp",
+          "width": 400,
+          "height": 400
+        },
+        {
+          "src": "/assets/catalogo-personalizados/r2-tag-natal-redonda-800.webp",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "/assets/catalogo-personalizados/r2-tag-natal-redonda-1254.webp",
+          "width": 1254,
+          "height": 1254
+        }
+      ],
+      "imageKind": "illustrative_mockup",
+      "productionStatus": "prototype_to_validate",
+      "stock": {
+        "quantity": null,
+        "verifiedAt": null,
+        "source": null
+      },
+      "specifications": {
+        "material": null,
+        "dimensionsMm": null,
+        "productionDays": null,
+        "piecesPerKit": null
+      },
+      "cost": {
+        "unitCents": null,
+        "setupCents": null,
+        "fixedFeeCents": null,
+        "paymentFeeBps": null,
+        "taxBps": null,
+        "targetContributionBps": null
+      },
+      "pricingPlan": {
+        "retailCents": null,
+        "tiers": [],
+        "status": "draft"
+      },
+      "pricingResearch": {
+        "status": "not_researched",
+        "retailTargetCents": null,
+        "bulkTargets": [],
+        "sources": []
+      },
+      "approvedOffers": [],
+      "unit": "unit",
+      "configurationFields": [
+        {
+          "key": "shape",
+          "label": "Formato",
+          "type": "text",
+          "required": true,
+          "placeholder": "",
+          "choices": [
+            {
+              "value": "redondo",
+              "label": "Redondo"
+            },
+            {
+              "value": "borda-recortada",
+              "label": "Borda recortada"
+            },
+            {
+              "value": "quadrado",
+              "label": "Quadrado"
+            },
+            {
+              "value": "estrela",
+              "label": "Estrela"
+            },
+            {
+              "value": "papai-noel",
+              "label": "Papai Noel"
+            },
+            {
+              "value": "arvore",
+              "label": "Árvore"
+            }
+          ]
+        },
+        {
+          "key": "notes",
+          "label": "Observações",
+          "type": "textarea",
+          "required": false,
+          "placeholder": ""
+        }
+      ],
+      "variants": [
+        {
+          "id": "redondo",
+          "label": "Redondo",
+          "configuration": {
+            "shape": "redondo"
+          },
+          "alt": "Imagem ilustrativa: mini enfeite natalino dourado — redondo.",
+          "images": [
+            {
+              "src": "/assets/catalogo-personalizados/r2-tag-natal-redonda-400.webp",
+              "width": 400,
+              "height": 400
+            },
+            {
+              "src": "/assets/catalogo-personalizados/r2-tag-natal-redonda-800.webp",
+              "width": 800,
+              "height": 800
+            },
+            {
+              "src": "/assets/catalogo-personalizados/r2-tag-natal-redonda-1254.webp",
+              "width": 1254,
+              "height": 1254
+            }
+          ]
+        },
+        {
+          "id": "borda-recortada",
+          "label": "Borda recortada",
+          "configuration": {
+            "shape": "borda-recortada"
+          },
+          "alt": "Imagem ilustrativa: mini enfeite natalino dourado — borda recortada.",
+          "images": [
+            {
+              "src": "/assets/catalogo-personalizados/r2-tag-natal-borda-recortada-400.webp",
+              "width": 400,
+              "height": 400
+            },
+            {
+              "src": "/assets/catalogo-personalizados/r2-tag-natal-borda-recortada-800.webp",
+              "width": 800,
+              "height": 800
+            },
+            {
+              "src": "/assets/catalogo-personalizados/r2-tag-natal-borda-recortada-1254.webp",
+              "width": 1254,
+              "height": 1254
+            }
+          ]
+        },
+        {
+          "id": "quadrado",
+          "label": "Quadrado",
+          "configuration": {
+            "shape": "quadrado"
+          },
+          "alt": "Imagem ilustrativa: mini enfeite natalino dourado — quadrado.",
+          "images": [
+            {
+              "src": "/assets/catalogo-personalizados/r2-tag-natal-quadrada-400.webp",
+              "width": 400,
+              "height": 400
+            },
+            {
+              "src": "/assets/catalogo-personalizados/r2-tag-natal-quadrada-800.webp",
+              "width": 800,
+              "height": 800
+            },
+            {
+              "src": "/assets/catalogo-personalizados/r2-tag-natal-quadrada-1254.webp",
+              "width": 1254,
+              "height": 1254
+            }
+          ]
+        },
+        {
+          "id": "estrela",
+          "label": "Estrela",
+          "configuration": {
+            "shape": "estrela"
+          },
+          "alt": "Imagem ilustrativa: mini enfeite natalino dourado — estrela.",
+          "images": [
+            {
+              "src": "/assets/catalogo-personalizados/r2-tag-natal-estrela-400.webp",
+              "width": 400,
+              "height": 400
+            },
+            {
+              "src": "/assets/catalogo-personalizados/r2-tag-natal-estrela-800.webp",
+              "width": 800,
+              "height": 800
+            },
+            {
+              "src": "/assets/catalogo-personalizados/r2-tag-natal-estrela-1254.webp",
+              "width": 1254,
+              "height": 1254
+            }
+          ]
+        },
+        {
+          "id": "papai-noel",
+          "label": "Papai Noel",
+          "configuration": {
+            "shape": "papai-noel"
+          },
+          "alt": "Imagem ilustrativa: mini enfeite natalino dourado — Papai Noel.",
+          "images": [
+            {
+              "src": "/assets/catalogo-personalizados/r2-tag-natal-papai-noel-400.webp",
+              "width": 400,
+              "height": 400
+            },
+            {
+              "src": "/assets/catalogo-personalizados/r2-tag-natal-papai-noel-800.webp",
+              "width": 800,
+              "height": 800
+            },
+            {
+              "src": "/assets/catalogo-personalizados/r2-tag-natal-papai-noel-1254.webp",
+              "width": 1254,
+              "height": 1254
+            }
+          ]
+        },
+        {
+          "id": "arvore",
+          "label": "Árvore",
+          "configuration": {
+            "shape": "arvore"
+          },
+          "alt": "Imagem ilustrativa: mini enfeite natalino dourado — árvore.",
+          "images": [
+            {
+              "src": "/assets/catalogo-personalizados/r2-tag-natal-arvore-400.webp",
+              "width": 400,
+              "height": 400
+            },
+            {
+              "src": "/assets/catalogo-personalizados/r2-tag-natal-arvore-800.webp",
+              "width": 800,
+              "height": 800
+            },
+            {
+              "src": "/assets/catalogo-personalizados/r2-tag-natal-arvore-1254.webp",
+              "width": 1254,
+              "height": 1254
+            }
+          ]
+        }
+      ],
+      "defaultVariant": "redondo",
+      "importSource": "cracha-navio-2026-10-16",
+      "updatedAt": "2026-10-16T06:15:00.669Z"
+    },
+    {
+      "id": "up-r2-enfeite-natal-transparente-nome",
+      "familyId": "up-natal",
+      "sku": "UP-R2-012",
+      "label": "Enfeites personalizados",
+      "title": "Enfeite natalino transparente com nome",
+      "description": "Enfeite circular com centro transparente, nome e detalhes dourados, acompanhado de fita branca no modelo ilustrado.",
+      "alt": "Imagem ilustrativa: enfeite natalino transparente com nome.",
+      "images": [
+        {
+          "src": "/assets/catalogo-personalizados/r2-enfeite-natal-transparente-nome-400.webp",
+          "width": 400,
+          "height": 400
+        },
+        {
+          "src": "/assets/catalogo-personalizados/r2-enfeite-natal-transparente-nome-800.webp",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "/assets/catalogo-personalizados/r2-enfeite-natal-transparente-nome-1254.webp",
+          "width": 1254,
+          "height": 1254
+        }
+      ],
+      "imageKind": "illustrative_mockup",
+      "productionStatus": "prototype_to_validate",
+      "stock": {
+        "quantity": null,
+        "verifiedAt": null,
+        "source": null
+      },
+      "specifications": {
+        "material": null,
+        "dimensionsMm": null,
+        "productionDays": null,
+        "piecesPerKit": null
+      },
+      "cost": {
+        "unitCents": null,
+        "setupCents": null,
+        "fixedFeeCents": null,
+        "paymentFeeBps": null,
+        "taxBps": null,
+        "targetContributionBps": null
+      },
+      "pricingPlan": {
+        "retailCents": null,
+        "tiers": [],
+        "status": "draft"
+      },
+      "pricingResearch": {
+        "status": "not_researched",
+        "retailTargetCents": null,
+        "bulkTargets": [],
+        "sources": []
+      },
+      "approvedOffers": [],
+      "unit": "unit",
+      "configurationFields": [
+        {
+          "key": "name",
+          "label": "Nome no enfeite",
+          "type": "text",
+          "required": true,
+          "placeholder": "Ex.: Marta"
+        },
+        {
+          "key": "notes",
+          "label": "Observações",
+          "type": "textarea",
+          "required": false,
+          "placeholder": ""
+        }
+      ],
+      "variants": [
+        {
+          "id": "padrao",
+          "label": "Modelo",
+          "configuration": {},
+          "alt": "Imagem ilustrativa: enfeite natalino transparente com nome.",
+          "images": [
+            {
+              "src": "/assets/catalogo-personalizados/r2-enfeite-natal-transparente-nome-400.webp",
+              "width": 400,
+              "height": 400
+            },
+            {
+              "src": "/assets/catalogo-personalizados/r2-enfeite-natal-transparente-nome-800.webp",
+              "width": 800,
+              "height": 800
+            },
+            {
+              "src": "/assets/catalogo-personalizados/r2-enfeite-natal-transparente-nome-1254.webp",
+              "width": 1254,
+              "height": 1254
+            }
+          ]
+        }
+      ],
+      "defaultVariant": "padrao",
+      "importSource": "cracha-navio-2026-10-16",
+      "updatedAt": "2026-10-16T06:15:00.669Z"
+    },
+    {
+      "id": "up-r2-display-futebol-personalizado",
+      "familyId": "up-decoracao",
+      "sku": "UP-R2-013",
+      "label": "Decoração esportiva",
+      "title": "Display de futebol personalizado",
+      "description": "Display decorativo de mesa com camisa, bola e chuteira. Personalize o nome e o número da camisa.",
+      "alt": "Imagem ilustrativa: display de futebol personalizado.",
+      "images": [
+        {
+          "src": "/assets/catalogo-personalizados/r2-display-futebol-personalizado-400.webp",
+          "width": 400,
+          "height": 400
+        },
+        {
+          "src": "/assets/catalogo-personalizados/r2-display-futebol-personalizado-800.webp",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "/assets/catalogo-personalizados/r2-display-futebol-personalizado-1254.webp",
+          "width": 1254,
+          "height": 1254
+        }
+      ],
+      "imageKind": "illustrative_mockup",
+      "productionStatus": "prototype_to_validate",
+      "stock": {
+        "quantity": null,
+        "verifiedAt": null,
+        "source": null
+      },
+      "specifications": {
+        "material": null,
+        "dimensionsMm": null,
+        "productionDays": null,
+        "piecesPerKit": null
+      },
+      "cost": {
+        "unitCents": null,
+        "setupCents": null,
+        "fixedFeeCents": null,
+        "paymentFeeBps": null,
+        "taxBps": null,
+        "targetContributionBps": null
+      },
+      "pricingPlan": {
+        "retailCents": null,
+        "tiers": [],
+        "status": "draft"
+      },
+      "pricingResearch": {
+        "status": "not_researched",
+        "retailTargetCents": null,
+        "bulkTargets": [],
+        "sources": []
+      },
+      "approvedOffers": [],
+      "unit": "unit",
+      "configurationFields": [
+        {
+          "key": "name",
+          "label": "Nome na camisa",
+          "type": "text",
+          "required": true,
+          "placeholder": "Ex.: Pedro"
+        },
+        {
+          "key": "number",
+          "label": "Número da camisa",
+          "type": "text",
+          "required": true,
+          "placeholder": "Ex.: 10"
+        },
+        {
+          "key": "notes",
+          "label": "Observações",
+          "type": "textarea",
+          "required": false,
+          "placeholder": ""
+        }
+      ],
+      "variants": [
+        {
+          "id": "padrao",
+          "label": "Modelo",
+          "configuration": {},
+          "alt": "Imagem ilustrativa: display de futebol personalizado.",
+          "images": [
+            {
+              "src": "/assets/catalogo-personalizados/r2-display-futebol-personalizado-400.webp",
+              "width": 400,
+              "height": 400
+            },
+            {
+              "src": "/assets/catalogo-personalizados/r2-display-futebol-personalizado-800.webp",
+              "width": 800,
+              "height": 800
+            },
+            {
+              "src": "/assets/catalogo-personalizados/r2-display-futebol-personalizado-1254.webp",
+              "width": 1254,
+              "height": 1254
+            }
+          ]
+        }
+      ],
+      "defaultVariant": "padrao",
+      "importSource": "cracha-navio-2026-10-16",
+      "updatedAt": "2026-10-16T06:15:00.669Z"
+    },
+    {
+      "id": "up-r2-placa-reservado-cutelo",
+      "familyId": "up-identificacao-personalizada",
+      "sku": "UP-R2-014",
+      "label": "Placas de mesa",
+      "title": "Placa Reservado: formato cutelo",
+      "description": "Placa de mesa com a palavra Reservado e formato decorativo de cutelo, apoiada em base amadeirada no modelo ilustrado.",
+      "alt": "Imagem ilustrativa: placa Reservado — formato cutelo.",
+      "images": [
+        {
+          "src": "/assets/catalogo-personalizados/r2-placa-reservado-cutelo-400.webp",
+          "width": 400,
+          "height": 400
+        },
+        {
+          "src": "/assets/catalogo-personalizados/r2-placa-reservado-cutelo-800.webp",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "/assets/catalogo-personalizados/r2-placa-reservado-cutelo-1254.webp",
+          "width": 1254,
+          "height": 1254
+        }
+      ],
+      "imageKind": "illustrative_mockup",
+      "productionStatus": "prototype_to_validate",
+      "stock": {
+        "quantity": null,
+        "verifiedAt": null,
+        "source": null
+      },
+      "specifications": {
+        "material": null,
+        "dimensionsMm": null,
+        "productionDays": null,
+        "piecesPerKit": null
+      },
+      "cost": {
+        "unitCents": null,
+        "setupCents": null,
+        "fixedFeeCents": null,
+        "paymentFeeBps": null,
+        "taxBps": null,
+        "targetContributionBps": null
+      },
+      "pricingPlan": {
+        "retailCents": null,
+        "tiers": [],
+        "status": "draft"
+      },
+      "pricingResearch": {
+        "status": "not_researched",
+        "retailTargetCents": null,
+        "bulkTargets": [],
+        "sources": []
+      },
+      "approvedOffers": [],
+      "unit": "unit",
+      "configurationFields": [
+        {
+          "key": "notes",
+          "label": "Observações",
+          "type": "textarea",
+          "required": false,
+          "placeholder": ""
+        }
+      ],
+      "variants": [
+        {
+          "id": "padrao",
+          "label": "Modelo",
+          "configuration": {},
+          "alt": "Imagem ilustrativa: placa Reservado — formato cutelo.",
+          "images": [
+            {
+              "src": "/assets/catalogo-personalizados/r2-placa-reservado-cutelo-400.webp",
+              "width": 400,
+              "height": 400
+            },
+            {
+              "src": "/assets/catalogo-personalizados/r2-placa-reservado-cutelo-800.webp",
+              "width": 800,
+              "height": 800
+            },
+            {
+              "src": "/assets/catalogo-personalizados/r2-placa-reservado-cutelo-1254.webp",
+              "width": 1254,
+              "height": 1254
+            }
+          ]
+        }
+      ],
+      "defaultVariant": "padrao",
+      "importSource": "cracha-navio-2026-10-16",
+      "updatedAt": "2026-10-16T06:15:00.669Z"
+    },
+    {
+      "id": "up-r2-painel-navio-veleiro-iluminado",
+      "familyId": "up-decoracao",
+      "sku": "UP-R2-015",
+      "label": "Painéis iluminados",
+      "title": "Painel de parede: navio veleiro",
+      "description": "Painel decorativo de parede com navio veleiro e ondas. O modelo ilustrado apresenta iluminação quente por trás da peça.",
+      "alt": "Imagem ilustrativa: painel decorativo de parede — navio veleiro iluminado.",
+      "images": [
+        {
+          "src": "/assets/catalogo-personalizados/r2-painel-navio-veleiro-iluminado-400.webp",
+          "width": 400,
+          "height": 400
+        },
+        {
+          "src": "/assets/catalogo-personalizados/r2-painel-navio-veleiro-iluminado-800.webp",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "/assets/catalogo-personalizados/r2-painel-navio-veleiro-iluminado-1254.webp",
+          "width": 1254,
+          "height": 1254
+        }
+      ],
+      "imageKind": "illustrative_mockup",
+      "productionStatus": "prototype_to_validate",
+      "stock": {
+        "quantity": null,
+        "verifiedAt": null,
+        "source": null
+      },
+      "specifications": {
+        "material": null,
+        "dimensionsMm": null,
+        "productionDays": null,
+        "piecesPerKit": null
+      },
+      "cost": {
+        "unitCents": null,
+        "setupCents": null,
+        "fixedFeeCents": null,
+        "paymentFeeBps": null,
+        "taxBps": null,
+        "targetContributionBps": null
+      },
+      "pricingPlan": {
+        "retailCents": null,
+        "tiers": [],
+        "status": "draft"
+      },
+      "pricingResearch": {
+        "status": "not_researched",
+        "retailTargetCents": null,
+        "bulkTargets": [],
+        "sources": []
+      },
+      "approvedOffers": [],
+      "unit": "unit",
+      "configurationFields": [
+        {
+          "key": "widthCm",
+          "label": "Largura desejada (cm)",
+          "type": "number",
+          "required": false,
+          "placeholder": ""
+        },
+        {
+          "key": "heightCm",
+          "label": "Altura desejada (cm)",
+          "type": "number",
+          "required": false,
+          "placeholder": ""
+        },
+        {
+          "key": "notes",
+          "label": "Observações",
+          "type": "textarea",
+          "required": false,
+          "placeholder": ""
+        }
+      ],
+      "variants": [
+        {
+          "id": "padrao",
+          "label": "Modelo",
+          "configuration": {},
+          "alt": "Imagem ilustrativa: painel decorativo de parede — navio veleiro iluminado.",
+          "images": [
+            {
+              "src": "/assets/catalogo-personalizados/r2-painel-navio-veleiro-iluminado-400.webp",
+              "width": 400,
+              "height": 400
+            },
+            {
+              "src": "/assets/catalogo-personalizados/r2-painel-navio-veleiro-iluminado-800.webp",
+              "width": 800,
+              "height": 800
+            },
+            {
+              "src": "/assets/catalogo-personalizados/r2-painel-navio-veleiro-iluminado-1254.webp",
+              "width": 1254,
+              "height": 1254
+            }
+          ]
+        }
+      ],
+      "defaultVariant": "padrao",
+      "importSource": "cracha-navio-2026-10-16",
+      "updatedAt": "2026-10-16T06:15:00.669Z"
+    }
+  ]
+}

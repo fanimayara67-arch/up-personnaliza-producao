@@ -1,0 +1,75 @@
+[
+  {
+    "retiredAt": "2026-10-16T01:49:24.818Z",
+    "reason": "Retirada solicitada pelo proprietário",
+    "model": {
+      "id": "porta-bombom-natal",
+      "familyId": "up-porta-bombom",
+      "sku": "UP-PERS-02",
+      "label": "Árvore",
+      "title": "Porta-bombom de Natal em formato de árvore",
+      "description": "Uma proposta para apresentar pequenos presentes nas confraternizações de Natal. Informe a quantidade e se deseja incluir o bombom no orçamento; composição, encaixe e produção serão confirmados.",
+      "alt": "Conceito de árvore verde com espaço para um bombom embalado.",
+      "images": [
+        {
+          "src": "/assets/catalogo-personalizados/02-porta-bombom-natal-400.webp",
+          "width": 400,
+          "height": 400
+        },
+        {
+          "src": "/assets/catalogo-personalizados/02-porta-bombom-natal-800.webp",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "/assets/catalogo-personalizados/02-porta-bombom-natal-1200.webp",
+          "width": 1200,
+          "height": 1200
+        }
+      ],
+      "imageKind": "ai_generated_product_concept",
+      "productionStatus": "prototype_to_validate",
+      "stock": {
+        "quantity": null,
+        "verifiedAt": null,
+        "source": null
+      },
+      "specifications": {
+        "material": null,
+        "dimensionsMm": null,
+        "productionDays": null,
+        "piecesPerKit": null
+      },
+      "cost": {
+        "unitCents": null,
+        "setupCents": null,
+        "fixedFeeCents": null,
+        "paymentFeeBps": null,
+        "taxBps": null,
+        "targetContributionBps": null
+      },
+      "pricingResearch": {
+        "asOf": "2026-10-15",
+        "confidence": "low",
+        "retailTargetCents": 1290,
+        "bulkTargets": [
+          {
+            "minimumQuantity": 10,
+            "unitTargetCents": 990
+          },
+          {
+            "minimumQuantity": 50,
+            "unitTargetCents": 790
+          },
+          {
+            "minimumQuantity": 100,
+            "unitTargetCents": 690
+          }
+        ],
+        "status": "proposal_not_approved",
+        "basis": "Modelo equivalente a validar; sem frete; não é oferta comercial"
+      },
+      "approvedOffers": []
+    }
+  }
+]

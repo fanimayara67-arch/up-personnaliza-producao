@@ -1,0 +1,6 @@
+shapely==2.2.0
+svgpathtools==1.8.0
+defusedxml==0.7.1
+Pillow==12.3.0
+pywin32==312; sys_platform == "win32"
+ezdxf==1.4.4

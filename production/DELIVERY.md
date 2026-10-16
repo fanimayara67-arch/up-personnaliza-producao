@@ -1,0 +1,21 @@
+# Estado da entrega
+
+Arquitetura: Next.js 16.4.2, React 19.3.1, TypeScript 6.0.2 estrito, Tailwind 4.3.3. Node local 24.19. TypeScript 7 foi substituído pela versão 6 compatível com o lint atual do Next. O catálogo e as APIs comerciais existentes são reutilizados; não há mudança de preços nem ativação do checkout.
+
+Loja: cabeçalho com menu, busca e contador, e carrossel são componentes React. Cartões, navegação, formulários e rodapé são renderizados por componentes compartilhados que preservam os contratos existentes. Geradores HTML permanecem como fonte de conteúdo; scripts comerciais ainda usados preservam regras de orçamento, rascunhos, carrinho, checkout e formulários. Esses arquivos não foram considerados obsoletos. `hero-media.js`, `real-photos.js` e `storefront-ui.js` não são carregados onde seus controles React os substituem, mas permanecem para geração, referências e servidor comercial local.
+
+Removidos após substituição: `production/web/app.html`, `login.html`, `login.js`, `style.css` e o script temporário de substituições. Foram criados nesta implementação e substituídos pelo App Router, componentes React e CSS compartilhado da produção. Não houve limpeza global ou exclusão de dados do usuário.
+
+Checkpoint Git local recuperável: branch `checkpoint/pre-next-production-1792143587950`, commit `2a290ca48841`. O índice e a branch de trabalho foram preservados. A publicação solicitada utiliza a branch local `publicacao-producao` e o novo repositório privado [up-personnaliza-producao](https://github.com/fanimayara67-arch/up-personnaliza-producao), com commit inicial independente, sem transportar o histórico antigo. Não foi feito deploy na Vercel; a importação está descrita em [DEPLOY-VERCEL.md](../DEPLOY-VERCEL.md).
+
+Verificação da entrega: instalação `npm ci` em cópia limpa sem `.env`, 54/54 testes JavaScript, lint, build Next e TypeScript aprovados. Geometria: 9/9 testes Python. Integração: 27 verificações reais com Auth/PostgreSQL/Storage, fila, conector SVG e IA, incluindo envio direto acima de 5 MB, rejeição de autorização adulterada, exclusividade e revogação. Navegador na cópia compilada: home, catálogo, login real, upload assinado, painel em 320/390/768/1440 px, zero erros de página e zero violações axe nos critérios executados. Dependências de execução: `npm audit --omit=dev` sem vulnerabilidades. Esses resultados não validam Corel/eCut, equipamento físico ou o domínio Vercel ainda não publicado.
+
+Conexões verificadas: Supabase Auth/PostgreSQL/Storage, bucket privado e RLS; AI Gateway com chamada autenticada real e interpretação de medidas; MCP stdio oficial com autenticação e revogação; conector Python com análise e encaixe reais.
+
+Conta permanente de administrador criada a pedido do proprietário e validada por login HTTP e abertura do painel. O endereço `.local` é identidade de acesso, não uma caixa de correio. Credenciais ficam somente em `.production/owner-access.json` ignorado; valores não são documentados no Git.
+
+Pendências externas: instalação/licença e versão CorelDRAW/eCut; entrada de macro eCut documentada para essa versão; seleção e autorização da janela no computador; identificação e qualificação de máquina/controlador/CAM; deploy e domínio HTTPS. O perfil Vercel está preparado com envio direto assinado ao Storage, conferência de tamanho/hash, download temporário e fila PostgreSQL. A hospedagem publicada ainda precisa da conferência após o deploy do proprietário.
+
+Os relatórios reais ficam em `audit/production-up/`. Não confundir testes de geometria, transporte e estado de interface com testes Corel/eCut/captura física. A inspeção concluiu com exit 0 e informou Corel ausente; não houve erro `exit -1` reproduzido no script.
+
+Auditoria npm: a dependência de desenvolvimento `braces` 3.0.3 usada pelo lint possui GHSA-vfj7-8cjw-p6xm, sem correção publicada no registro consultado. Cinco entradas de severidade alta são a cadeia dessa mesma dependência, não cinco falhas independentes do aplicativo. Não foi aplicado downgrade incompatível de Next. A aplicação em produção não utiliza padrões de glob fornecidos por usuários para o lint. Reavalie quando houver versão corrigida; execute `npm audit --omit=dev` para conferir a árvore de execução separadamente.

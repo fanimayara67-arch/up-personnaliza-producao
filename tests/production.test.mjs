@@ -1,0 +1,12 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {normalizeParameters} from '../production/parameters.js';
+import {sessionCodec,ProductionAuth} from '../production/auth.js';
+import {ProductionService} from '../production/service.js';
+const analysis={pieces:[{id:'p1'}]};
+test('produção normaliza unidades sem confundir distância com largura de corte',()=>{const result=normalizeParameters({width:120,height:90,unit:'cm',gap:.5,margin:1,kerf:.02,quantities:{p1:4}},analysis);assert.equal(result.width,1200);assert.equal(result.height,900);assert.equal(result.gap,5);assert.equal(result.kerf,.2);assert.equal(result.kerfAppliedBy,'CAM');assert.equal(result.camPending,true);});
+test('produção recusa parâmetros ausentes, não finitos, margens e quantidades incoerentes',()=>{for(const params of [{},{width:120,height:90,unit:'m'},{width:NaN,height:90,unit:'mm'},{width:10,height:10,unit:'mm',margin:5},{width:120,height:90,unit:'mm',quantities:{p2:1}},{width:120,height:90,unit:'mm',quantities:{p1:201}},{width:120,height:90,unit:'mm',grain:'horizontal',rotations:[90]}])assert.throws(()=>normalizeParameters(params,analysis));});
+test('sessão privada é cifrada, autenticada e expira',()=>{const codec=sessionCodec('test-secret-'.repeat(8)),token=codec.seal({access:'private-test-token',until:Date.now()+10000});assert.ok(!token.includes('private-test-token'));assert.equal(codec.open(token).access,'private-test-token');assert.throws(()=>codec.open(token.slice(0,-5)+'badxx'));assert.throws(()=>codec.open(codec.seal({access:'x',until:Date.now()-1})));});
+test('permissão de operador exige associação ativa verificada no servidor',async()=>{const auth=new ProductionAuth({},{table:async()=>[]});await assert.rejects(auth.membership({id:'123',user_metadata:{role:'admin'}}),{status:403});});
+test('origens de formulários privados precisam coincidir com a configuração',()=>{const auth=new ProductionAuth({origin:'https://up.example'},{});assert.throws(()=>auth.sameOrigin({headers:{origin:'https://attacker.example'}}),{status:403});assert.doesNotThrow(()=>auth.sameOrigin({headers:{origin:'https://up.example'}}));});
+test('isolamento entre equipes impede consultar trabalho de outra equipe',async()=>{const service=new ProductionService({table:async()=>[]});await assert.rejects(service.job({team_id:'team2'},'13a40eb5-4019-4110-8132-330d95334d36'),{status:404});});

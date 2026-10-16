@@ -1,0 +1,2 @@
+# SDK oficial solicitado; commit fixo para reproduzir a instalacao.
+mercadopago @ git+https://github.com/mercadopago/sdk-python.git@5da68f4294b71e83eb6044394eb8401fa084d6dc

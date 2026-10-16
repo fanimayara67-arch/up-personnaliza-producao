@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120mm" height="90mm" viewBox="0 0 120 90">
+  <title>Exemplo de produção: contornos reais em milímetros</title>
+  <path id="letra-L" d="M5 5H35V15H15V35H5Z"/>
+  <path id="aro-com-vazado" fill-rule="evenodd" d="M50 5H85V40H50Z M57 12H78V33H57Z"/>
+  <path id="peca-curva" d="M5 55C5 43 35 43 35 55V75H5Z"/>
+</svg>

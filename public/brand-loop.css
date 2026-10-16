@@ -1,0 +1,138 @@
+.brand-loop {
+  --brand-gap: 44px;
+  --brand-width: 176px;
+  --brand-distance: 2200px;
+  --brand-duration: 61.111s;
+  padding: 22px 0 24px;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+}
+
+.brand-loop__head {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+}
+
+.brand-loop__title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  color: var(--muted);
+  font-size: .8rem;
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.brand-loop__title > span {
+  width: 5px;
+  height: 5px;
+  flex: none;
+  border-radius: 50%;
+  background: var(--brand-green);
+}
+
+/* One horizontal line, including the no-JavaScript fallback. */
+.brand-loop__viewport { overflow-x: auto; overflow-y: hidden; }
+.brand-loop__viewport:focus-visible { outline: 2px solid var(--ink); outline-offset: -2px; }
+.brand-loop__track { display: flex; width: max-content; }
+.brand-loop__group {
+  display: flex;
+  flex: 0 0 auto;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: var(--brand-gap);
+  margin: 0;
+  padding: 0 var(--brand-gap) 0 0;
+  list-style: none;
+}
+
+.brand-loop__mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--brand-width);
+  height: 90px;
+  flex: 0 0 var(--brand-width);
+}
+
+.brand-loop__mark img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: min(100%, var(--mark-width, 160px));
+  max-height: 76px;
+  object-fit: contain;
+}
+
+.brand-loop__mark[data-brand="bel"] { --mark-width: 110px; }
+.brand-loop__mark[data-brand="kumon"] { --mark-width: 155px; }
+.brand-loop__mark[data-brand="jose"] { --mark-width: 174px; }
+.brand-loop__mark[data-brand="bahia"] { --mark-width: 130px; }
+.brand-loop__mark[data-brand="feira"] { --mark-width: 90px; }
+.brand-loop__mark[data-brand="bel"] img,
+.brand-loop__mark[data-brand="jose"] img { filter: brightness(0); }
+
+.brand-loop[data-ready="true"] .brand-loop__viewport {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 48px, #000 calc(100% - 48px), transparent);
+  mask-image: linear-gradient(to right, transparent, #000 48px, #000 calc(100% - 48px), transparent);
+}
+
+.brand-loop[data-ready="true"] .brand-loop__track {
+  display: flex;
+  width: max-content;
+  animation: brand-loop-scroll var(--brand-duration) linear infinite;
+}
+
+.brand-loop[data-ready="true"] .brand-loop__group {
+  flex: 0 0 auto;
+  flex-wrap: nowrap;
+  justify-content: start;
+  gap: var(--brand-gap);
+  /* The trailing gap equals every internal gap, including at the loop seam. */
+  padding-right: var(--brand-gap);
+}
+
+@keyframes brand-loop-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-1 * var(--brand-distance))); }
+}
+
+.brand-loop:is(:focus-within,[data-offscreen="true"],[data-background="true"]) .brand-loop__track {
+  animation-play-state: paused;
+}
+
+@media (max-width: 700px) {
+  .brand-loop {
+    --brand-gap: 28px;
+    --brand-width: 148px;
+    --brand-distance: 1760px;
+    --brand-duration: 48.889s;
+    padding: 18px 0;
+  }
+  .brand-loop__head { margin-bottom: 10px; }
+  .brand-loop__title { font-size: .75rem; letter-spacing: .04em; }
+  .brand-loop__mark { height: 84px; }
+  .brand-loop__mark img { max-height: 68px; max-width: min(calc(100% - 8px), var(--mark-width, 160px)); }
+  .brand-loop[data-ready="true"] .brand-loop__viewport {
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 20px, #000 calc(100% - 20px), transparent);
+    mask-image: linear-gradient(to right, transparent, #000 20px, #000 calc(100% - 20px), transparent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-loop[data-ready="true"] .brand-loop__track { animation: none; }
+  .brand-loop[data-ready="true"] .brand-loop__viewport { overflow-x: auto; mask-image: none; -webkit-mask-image: none; }
+  .brand-loop[data-ready="true"] .brand-loop__group {
+    padding-inline: 17px var(--brand-gap);
+  }
+  .brand-loop__group[aria-hidden="true"] { display: none; }
+}

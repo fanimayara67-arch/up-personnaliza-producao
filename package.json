@@ -1,0 +1,45 @@
+{
+  "name": "up-personnaliza-producao",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev --port 3101",
+    "build": "next build",
+    "start": "next start --port 3101",
+    "legacy:start": "node server.js",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src next.config.ts",
+    "production:inspect": "node scripts/production-inspect.mjs",
+    "production:setup": "node scripts/setup-production.mjs --apply",
+    "production:ai-check": "node scripts/production-ai-check.mjs --live",
+    "test": "node --test tests/*.test.mjs",
+    "checkout:check": "node scripts/check-checkout.mjs",
+    "checkout:setup": "node scripts/setup-checkout.mjs --apply",
+    "catalog:admin": "node scripts/catalog-admin.mjs",
+    "catalog:build": "node scripts/catalog-admin.mjs build",
+    "inquiries:check": "node scripts/setup-inquiries.mjs",
+    "inquiries:setup": "node scripts/setup-inquiries.mjs --install-inquiries",
+    "inquiries:verify": "node scripts/verify-inquiries-db.mjs"
+  },
+  "engines": {
+    "node": "24.x"
+  },
+  "dependencies": {
+    "html-react-parser": "6.1.8",
+    "next": "16.4.2",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.3.3",
+    "@types/node": "26.6.5",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "eslint": "9.39.5",
+    "eslint-config-next": "16.4.2",
+    "prettier": "3.9.10",
+    "tailwindcss": "4.3.3",
+    "typescript": "6.0.2"
+  }
+}

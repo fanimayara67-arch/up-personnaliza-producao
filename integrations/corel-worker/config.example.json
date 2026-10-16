@@ -1,0 +1,16 @@
+{
+  "url": "https://sua-loja.example",
+  "credential": "COPIE_A_CREDENCIAL_up_worker_GERADA_NO_PAINEL",
+  "nestingEngine": "up",
+  "corel": {
+    "progid": "",
+    "ecut": {
+      "verified": false,
+      "version": "",
+      "corelVersion": "",
+      "documentationUrl": "",
+      "module": "",
+      "macro": ""
+    }
+  }
+}

@@ -1,0 +1,11 @@
+(() => {
+ const root=document.querySelector('[data-listing]');if(!root)return;
+ const categoryMenu=document.querySelector('.store-sidebar details'),mobile=matchMedia('(max-width:899px)');
+ function adaptCategories(){if(categoryMenu)categoryMenu.open=!mobile.matches;}
+ adaptCategories();mobile.addEventListener('change',adaptCategories);
+ const input=document.querySelector('#listingQuery'),sort=document.querySelector('#listingSort'),intent=document.querySelector('#listingIntent'),grid=document.querySelector('#listingGrid'),cards=[...grid.children];
+ const params=new URL(location.href).searchParams;input.value=params.get('q')||'';if([...sort.options].some(o=>o.value===params.get('ordem')))sort.value=params.get('ordem');if(intent&&[...intent.options].some(o=>o.value===params.get('ocasiao')))intent.value=params.get('ocasiao');
+ function render(){const allowed=new Set(UP_SEARCH.find(input.value).map(p=>p.id));let visible=cards.filter(card=>allowed.has(card.dataset.productCard)&&(!intent?.value||card.dataset.intent===intent.value));if(sort.value==='name')visible.sort((a,b)=>a.dataset.title.localeCompare(b.dataset.title,'pt-BR'));else if(sort.value.startsWith('price-'))visible.sort((a,b)=>{const ap=a.dataset.price?Number(a.dataset.price):null,bp=b.dataset.price?Number(b.dataset.price):null;return ap===null?(bp===null?0:1):bp===null?-1:(sort.value==='price-low'?ap-bp:bp-ap);});grid.replaceChildren(...visible);document.querySelector('#listingCount').textContent=`${visible.length} ${visible.length===1?'produto':'produtos'}${input.value.trim()?' para “'+input.value.trim()+'”':''}`;document.querySelector('#listingEmpty').hidden=visible.length>0;}
+ function updateUrl(){const url=new URL(location.href);for(const [key,value]of [['q',input.value.trim()],['ordem',sort.value==='default'?'':sort.value],['ocasiao',intent?.value||'']]){if(value)url.searchParams.set(key,value);else url.searchParams.delete(key);}history.replaceState(null,'',url);render();}
+ document.querySelector('#listingSearch').addEventListener('submit',event=>{event.preventDefault();updateUrl();document.querySelector('#listingCount').focus();});sort.addEventListener('change',updateUrl);intent?.addEventListener('change',updateUrl);render();
+})();

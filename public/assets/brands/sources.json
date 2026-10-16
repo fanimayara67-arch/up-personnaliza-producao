@@ -1,0 +1,136 @@
+[
+  {
+    "id": "bel",
+    "name": "Bel Cosméticos",
+    "file": "bel-cosmeticos.svg",
+    "status": "Original · vetor SVG",
+    "source": "https://belcosmeticos.com.br/images/logo.svg",
+    "group": "Empresa",
+    "png": "bel-cosmeticos.png"
+  },
+  {
+    "id": "kumon",
+    "name": "Kumon",
+    "file": "kumon.webp",
+    "status": "Original · PNG",
+    "source": "https://www.kumon.com.br/",
+    "group": "Empresa",
+    "png": "kumon.png",
+    "originalFile": "kumon.png",
+    "width": 212,
+    "height": 50
+  },
+  {
+    "id": "apoio",
+    "name": "Apoio Materiais Elétricos",
+    "file": "apoio-materiais-eletricos.webp",
+    "status": "Original · PNG",
+    "source": "https://www.apoio.ind.br/",
+    "group": "Empresa",
+    "png": "apoio-materiais-eletricos.png",
+    "originalFile": "apoio-materiais-eletricos.png",
+    "width": 352,
+    "height": 102
+  },
+  {
+    "id": "jose",
+    "name": "José Alberto Netimóveis",
+    "file": "jose-alberto-netimoveis-branca.webp",
+    "status": "Original · versão branca",
+    "source": "https://www.josealbertoimoveis.com.br/",
+    "group": "Empresa",
+    "png": "jose-alberto-netimoveis-branca.png",
+    "originalFile": "jose-alberto-netimoveis-branca.png",
+    "width": 291,
+    "height": 40
+  },
+  {
+    "id": "unimar",
+    "name": "Farmácia Unimar",
+    "file": "farmacia-unimar-reconstruida.webp",
+    "status": "Reconstruída da foto · PNG",
+    "source": "image(20261014-085639).png",
+    "group": "Empresa",
+    "png": "farmacia-unimar-reconstruida.png",
+    "originalFile": "farmacia-unimar-reconstruida.png",
+    "width": 400,
+    "height": 149
+  },
+  {
+    "id": "car",
+    "name": "CAR Bahia",
+    "file": "car-bahia.svg",
+    "status": "Original · vetor SVG",
+    "source": "https://www.ba.gov.br/car/sites/site-car/files/migracao_2024/arquivos/files/2023-05/MANUAL%20DE%20MARCA%20CAR_.pdf",
+    "group": "Empresa pública",
+    "png": "car-bahia.png"
+  },
+  {
+    "id": "bahia",
+    "name": "Governo da Bahia",
+    "file": "governo-da-bahia.webp",
+    "status": "Original · PNG",
+    "source": "https://www.ba.gov.br/car/modules/custom/bagov_base_blocks/assets/images/logo-governo-rodape.png",
+    "group": "Órgão público",
+    "png": "governo-da-bahia.png",
+    "originalFile": "governo-da-bahia.png",
+    "width": 350,
+    "height": 200
+  },
+  {
+    "id": "forum",
+    "name": "1º Fórum NR-1 Bahia",
+    "file": "forum-nr1-bahia.webp",
+    "status": "Original · PNG",
+    "source": "https://1forumnr1bahia.com.br/_assets/images/7e6dd6140d8aa69bed2a7e58da6f3a76.png",
+    "group": "Evento",
+    "png": "forum-nr1-bahia.png",
+    "originalFile": "forum-nr1-bahia.png",
+    "width": 158,
+    "height": 76
+  },
+  {
+    "id": "feira",
+    "name": "15ª Feira Baiana da Agricultura Familiar",
+    "file": "feira-baiana-reconstruida.webp",
+    "status": "Reconstruída da foto · PNG",
+    "source": "image(20261014-085530).png",
+    "group": "Evento",
+    "png": "feira-baiana-reconstruida.png",
+    "originalFile": "feira-baiana-reconstruida.png",
+    "width": 219,
+    "height": 200
+  },
+  {
+    "id": "sinal3",
+    "name": "Sinal3 Comunicação Visual",
+    "file": "sinal3-reconstruida.webp",
+    "status": "Reconstruída da foto · PNG",
+    "source": "image(20261014-085530).png",
+    "group": "Marca da comunicação visual",
+    "png": "sinal3-reconstruida.png",
+    "originalFile": "sinal3-reconstruida.png",
+    "width": 400,
+    "height": 136
+  },
+  {
+    "id": "grupo-sifra",
+    "name": "Grupo Sifra",
+    "file": "grupo-sifra.png",
+    "status": "PNG original com transparência, fornecido pelo proprietário",
+    "source": "Logotipo GRUPO SIFRA em fundo transparente.png",
+    "originalFile": "Logotipo GRUPO SIFRA em fundo transparente.png",
+    "width": 1536,
+    "height": 1024
+  },
+  {
+    "id": "ar-brandao",
+    "name": "AR Brandão Odontologia",
+    "file": "ar-brandao-odontologia.png",
+    "status": "PNG original dourado com transparência, fornecido pelo proprietário",
+    "source": "Logotipo dourado AR Brandão Odontologia.png",
+    "originalFile": "Logotipo dourado AR Brandão Odontologia.png",
+    "width": 1536,
+    "height": 1024
+  }
+]

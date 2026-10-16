@@ -1,0 +1,1 @@
+{"name":"up-production-mcp","private":true,"version":"1.0.0","type":"module","engines":{"node":">=22"},"scripts":{"start":"node index.mjs"},"dependencies":{"@modelcontextprotocol/sdk":"1.32.1"}}

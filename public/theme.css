@@ -1,0 +1,32 @@
+/* Cores, medidas e estados compartilhados pelas três páginas. */
+:root {
+  --brand-green: #67ad34;
+  --paper: #fff;
+  --cream: var(--paper);
+  --ink: #171718;
+  --muted: #626262;
+  --line: #d6d6d6;
+  --surface: #f5f6f3;
+  --surface-selected: #edf5e7;
+  --danger: #a32334;
+  --success: #216144;
+  --warning: #845019;
+  --orange: var(--brand-green);
+  --deep: var(--brand-green);
+  --lime: var(--paper);
+  --max: 1260px;
+  --gutter: clamp(16px, 3vw, 32px);
+  --section-space: clamp(48px, 6vw, 88px);
+  --control-size: 44px;
+  --header-height: 76px;
+  --font-body: Montserrat, Arial, sans-serif;
+  --ease: cubic-bezier(.22, .61, .36, 1);
+}
+::selection { background:var(--brand-green); color:var(--ink); }
+:is(a,button,input,textarea,select,summary):focus-visible { outline:2px solid var(--ink); outline-offset:3px; }
+:is(button,input,textarea,select):disabled { cursor:not-allowed; }
+.button:disabled { opacity:.5; transform:none; }
+@media(prefers-reduced-motion:reduce) {
+  html { scroll-behavior:auto; }
+  *, *::before, *::after { scroll-behavior:auto !important; transition:none !important; }
+}

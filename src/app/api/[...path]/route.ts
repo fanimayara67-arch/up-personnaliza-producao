@@ -1,0 +1,10 @@
+import { dispatch } from "@/lib/backend";
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+export const maxDuration = 300;
+export const GET = dispatch;
+export const POST = dispatch;
+export const PUT = dispatch;
+export const PATCH = dispatch;
+export const DELETE = dispatch;
+export const HEAD = dispatch;
